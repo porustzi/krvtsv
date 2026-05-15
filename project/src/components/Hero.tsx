@@ -44,14 +44,14 @@ export default function Hero() {
             </motion.p>
 
             <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-4">
-              
+              <a
                 href="#project"
                 className="group inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full hover:bg-rose-500 transition-colors duration-300"
               >
                 ТОП ПРОЄКТ
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              
+              <a
                 href="https://t.me/krvtsvcorp"
                 target="_blank"
                 rel="noopener noreferrer"
