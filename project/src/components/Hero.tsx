@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-50 rounded-full -translate-x-1/3 translate-y-1/4 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1px] h-[500px] bg-rose-100 pointer-events-none rotate-12" />
 
-      <div className="relative max-w-7xl mx-auto px-6 w-full">
+      <div className="relative max-w-7xl mx-auto px-8 sm:px-10 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <motion.div {...fadeUp(0)} className="mb-4">
@@ -25,10 +25,9 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            <motion.h1 {...fadeUp(0.1)} className="text-[clamp(3rem,8vw,6.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-4">
-              САЙТИ,<br />
-              <span className="text-rose-500">ЯКІ</span><br />
-              ПРОДАЮТЬ
+            <motion.h1 {...fadeUp(0.1)} className="text-[clamp(2.5rem,6vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-4">
+              САЙТИ, ЯКІ<br />
+              <span className="text-rose-500">ПРОДАЮТЬ</span>
             </motion.h1>
 
             <motion.div {...fadeUp(0.25)} className="mt-6 mb-4">
@@ -45,14 +44,14 @@ export default function Hero() {
             </motion.p>
 
             <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-4">
-              <a
+              
                 href="#project"
                 className="group inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full hover:bg-rose-500 transition-colors duration-300"
               >
                 ТОП ПРОЄКТ
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a
+              
                 href="https://t.me/krvtsvcorp"
                 target="_blank"
                 rel="noopener noreferrer"
