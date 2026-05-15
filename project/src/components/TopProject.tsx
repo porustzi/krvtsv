@@ -56,12 +56,12 @@ export default function TopProject() {
 
                 <div className="relative overflow-hidden" style={{ aspectRatio: '16/10' }}>
                   <img
-                    src="https://lyzeum167.com/og-image.jpg"
+                    src="https://lh5.googleusercontent.com/p/AF1QipO0XUAiZ7Qh1RjzOSv-u1DY1jYA8gya8Hf4je02=w800-h500-k-no"
                     alt="School Portal UI"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.currentTarget.src =
-                        'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=compress&cs=tinysrgb&w=1200';
+                        'https://lh5.googleusercontent.com/p/AF1QipO0XUAiZ7Qh1RjzOSv-u1DY1jYA8gya8Hf4je02=w800-h500-k-no';
                     }}
                   />
 
