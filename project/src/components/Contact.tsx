@@ -26,21 +26,21 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 md:py-32 bg-rose-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-12 lg:gap-24 items-start">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.3fr] gap-12 lg:gap-28 items-start">
+
           {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center lg:text-left max-w-[560px]"
+            className="text-center lg:text-left max-w-[540px]"
           >
             <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">
               ЗВ'ЯЗОК
             </p>
 
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.3rem] xl:text-[6.3rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 whitespace-nowrap">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 whitespace-nowrap">
               ДАВАЙ
               <br />
               <span className="text-rose-500 block">
@@ -103,7 +103,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="w-full lg:pl-8"
+            className="w-full lg:pl-20 xl:pl-24"
           >
             {sent ? (
               <motion.div
