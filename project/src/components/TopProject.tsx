@@ -60,8 +60,8 @@ export default function TopProject() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-white font-black text-2xl uppercase tracking-tight">SCHOOL PORTAL</p>
-                    <p className="text-rose-300 text-sm font-semibold uppercase tracking-widest">Education Platform</p>
+                    <p className="text-white font-black text-2xl uppercase tracking-tight">Ліцей 167</p>
+                    <p className="text-rose-300 text-sm font-semibold uppercase tracking-widest">Школа у Києві</p>
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export default function TopProject() {
                   Освіта / Соцпроєкт
                 </span>
                 <span className="text-xs font-black uppercase tracking-widest text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                  2024
+                  2026
                 </span>
               </div>
               <h3 className="text-3xl font-black uppercase text-gray-900 leading-tight">
