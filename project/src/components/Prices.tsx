@@ -3,33 +3,25 @@ import { Check } from 'lucide-react';
 
 const plans = [
   {
-    name: 'Лендінг',
-    price: 'від 5 000 грн',
-    duration: '3–5 днів',
+    name: 'Лендінг', price: 'від 5 000 грн', duration: '3–5 днів',
     desc: 'Один екран, один месседж, одна ціль — заявки.',
     features: ['До 5 секцій', 'Адаптивна верстка', 'Форма заявки', 'Базова SEO', 'Деплой'],
     highlighted: false,
   },
   {
-    name: 'Бізнес-сайт',
-    price: 'від 12 000 грн',
-    duration: '7–14 днів',
+    name: 'Бізнес-сайт', price: 'від 12 000 грн', duration: '7–14 днів',
     desc: 'Повноцінний сайт для бізнесу з усіма необхідними сторінками.',
     features: ['До 10 сторінок', 'Унікальний дизайн', 'CMS / адмінка', 'SEO-оптимізація', 'Аналітика', 'Деплой + домен'],
     highlighted: true,
   },
   {
-    name: 'Магазин',
-    price: 'від 20 000 грн',
-    duration: '14–21 день',
+    name: 'Магазин', price: 'від 20 000 грн', duration: '14–21 день',
     desc: 'Інтернет-магазин з каталогом, кошиком і платежами.',
     features: ['Каталог товарів', 'Кошик та оплата', 'Кабінет клієнта', 'Адмінка', 'Інтеграції', 'Підтримка 1 міс.'],
     highlighted: false,
   },
   {
-    name: 'Редизайн',
-    price: 'від 8 000 грн',
-    duration: '5–10 днів',
+    name: 'Редизайн', price: 'від 8 000 грн', duration: '5–10 днів',
     desc: 'Перетворимо застарілий сайт на сучасний інструмент продажів.',
     features: ['Аудит поточного сайту', 'Новий дизайн', 'Збереження SEO', 'Оновлення коду', 'Тестування'],
     highlighted: false,
@@ -38,7 +30,7 @@ const plans = [
 
 export default function Prices() {
   return (
-    <section id="prices" className="py-16 md:py-32 bg-white overflow-hidden">
+    <section id="prices" className="py-20 md:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -47,12 +39,12 @@ export default function Prices() {
           transition={{ duration: 0.6 }}
           className="mb-12 md:mb-20 text-center lg:text-left"
         >
-          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вартість</p>
-          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.85] text-gray-900 break-words">
+          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вартість</p>
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.85] text-gray-900 break-words">
             ПРОЗОРІ<br />
             <span className="text-rose-500">ЦІНИ</span>
           </h2>
-          <p className="text-gray-500 mt-6 text-sm sm:text-base md:text-lg max-w-lg mx-auto lg:mx-0 break-words">
+          <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-lg mx-auto lg:mx-0 break-words">
             Фіксована ціна без прихованих доплат. Що домовились — те й буде.
           </p>
         </motion.div>
@@ -80,19 +72,19 @@ export default function Prices() {
               )}
 
               <div className="mb-6">
-                <p className={`text-[10px] font-black uppercase tracking-[0.25em] mb-2 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`}>
+                <p className={`text-xs sm:text-[10px] font-black uppercase tracking-[0.25em] mb-2 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`}>
                   {plan.duration}
                 </p>
-                <h3 className={`text-xl md:text-2xl font-black uppercase tracking-wide mb-3 break-words ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
+                <h3 className={`text-2xl md:text-2xl font-black uppercase tracking-wide mb-3 break-words ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm leading-relaxed break-words ${plan.highlighted ? 'text-gray-400' : 'text-gray-500'}`}>
+                <p className={`text-base sm:text-sm leading-relaxed break-words ${plan.highlighted ? 'text-gray-400' : 'text-gray-500'}`}>
                   {plan.desc}
                 </p>
               </div>
 
               <div className="mb-8">
-                <p className={`text-2xl sm:text-3xl md:text-4xl font-black break-words ${plan.highlighted ? 'text-rose-400' : 'text-gray-900'}`}>
+                <p className={`text-3xl sm:text-3xl md:text-4xl font-black break-words ${plan.highlighted ? 'text-rose-400' : 'text-gray-900'}`}>
                   {plan.price}
                 </p>
               </div>
@@ -100,8 +92,8 @@ export default function Prices() {
               <div className="space-y-3 flex-1 mb-8">
                 {plan.features.map((f) => (
                   <div key={f} className="flex items-start gap-3">
-                    <Check size={16} className={`mt-0.5 flex-shrink-0 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`} />
-                    <p className={`text-sm font-medium leading-tight break-words ${plan.highlighted ? 'text-gray-300' : 'text-gray-600'}`}>{f}</p>
+                    <Check size={18} className={`mt-0.5 flex-shrink-0 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`} />
+                    <p className={`text-base sm:text-sm font-medium leading-tight break-words ${plan.highlighted ? 'text-gray-300' : 'text-gray-600'}`}>{f}</p>
                   </div>
                 ))}
               </div>
@@ -127,7 +119,7 @@ export default function Prices() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center text-gray-400 text-[10px] sm:text-sm mt-10 font-medium uppercase tracking-widest px-4 break-words"
+          className="text-center text-gray-400 text-xs sm:text-[10px] mt-10 font-medium uppercase tracking-widest px-4 break-words"
         >
           Індивідуальні проєкти — обговорюємо ціну особисто в Telegram
         </motion.p>

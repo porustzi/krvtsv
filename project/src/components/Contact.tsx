@@ -2,31 +2,58 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, CheckCircle } from 'lucide-react';
 
-export default function Contact() {
-  const [form, setForm] = useState({
-    name: '',
-    contact: '',
-    message: '',
-  });
+// 1. Створи бота в @BotFather
+// 2. Отримай токен
+// 3. Додай в Netlify: VITE_TELEGRAM_TOKEN і VITE_TELEGRAM_CHAT_ID
+const TG_TOKEN = import.meta.env.VITE_TELEGRAM_TOKEN || '';
+const TG_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID || '';
 
+export default function Contact() {
+  const [form, setForm] = useState({ name: '', contact: '', message: '' });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
 
-    // Імітація відправки
-    await new Promise((r) => setTimeout(r, 1000));
+    if (TG_TOKEN && TG_CHAT_ID) {
+      const text = `\u{1F4A}\u{200D}\u{1F4E8} <b>Нова заявка</b>\n\n<b>Ім'я:</b> ${form.name}\n<b>Контакт:</b> ${form.contact}\n<b>Повідомлення:</b> ${form.message}`;
 
-    // Реальна інтеграція буде додана пізніше
-    console.log('Form data:', form);
+      try {
+        const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: TG_CHAT_ID,
+            text,
+            parse_mode: 'HTML',
+          }),
+        });
+
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.description || 'Telegram error');
+        }
+      } catch (err: any) {
+        setError(err.message || 'Помилка відправки');
+        setLoading(false);
+        return;
+      }
+    } else {
+      // fallback — имитация
+      await new Promise((r) => setTimeout(r, 1000));
+      console.log('Form data:', form);
+    }
+
     setSent(true);
     setLoading(false);
   };
 
   return (
-    <section id="contact" className="py-16 md:py-32 bg-rose-50 overflow-hidden">
+    <section id="contact" className="py-20 md:py-32 bg-rose-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.3fr] gap-12 lg:gap-28 items-start">
 
@@ -37,11 +64,11 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="text-center lg:text-left max-w-[540px] w-full"
           >
-            <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">
+            <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">
               ЗВ'ЯЗОК
             </p>
 
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 break-words">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 break-words">
               ДАВАЙ
               <br />
               <span className="text-rose-500 block">
@@ -49,7 +76,7 @@ export default function Contact() {
               </span>
             </h2>
 
-            <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-md mx-auto lg:mx-0 break-words">
+            <p className="text-gray-500 text-lg sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-md mx-auto lg:mx-0 break-words">
               Маєш ідею або вже точно знаєш, що хочеш?
               Напиши — відповімо протягом декількох годин
               і одразу до діла.
@@ -62,35 +89,24 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 bg-white rounded-2xl px-5 py-4 md:px-6 md:py-5 border-2 border-transparent hover:border-rose-200 hover:shadow-md transition-all duration-300"
               >
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-rose-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <Send size={18} className="text-white" />
+                <div className="w-12 h-12 md:w-12 md:h-12 bg-rose-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <Send size={20} className="text-white" />
                 </div>
-
                 <div className="text-left min-w-0">
-                  <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold mb-0.5">
-                    Telegram
-                  </p>
-                  <p className="font-black text-sm md:text-base text-gray-900 break-words">
-                    @krvtsvcorp
-                  </p>
+                  <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-0.5">Telegram</p>
+                  <p className="font-black text-base md:text-base text-gray-900 break-words">@krvtsvcorp</p>
                 </div>
               </a>
-
               <a
                 href="mailto:hello@krvtsv.com"
                 className="group flex items-center gap-4 bg-white rounded-2xl px-5 py-4 md:px-6 md:py-5 border-2 border-transparent hover:border-rose-200 hover:shadow-md transition-all duration-300"
               >
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <Mail size={18} className="text-white" />
+                <div className="w-12 h-12 md:w-12 md:h-12 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <Mail size={20} className="text-white" />
                 </div>
-
                 <div className="text-left min-w-0">
-                  <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold mb-0.5">
-                    Email
-                  </p>
-                  <p className="font-black text-sm md:text-base text-gray-900 break-words">
-                    hello@krvtsv.com
-                  </p>
+                  <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-0.5">Email</p>
+                  <p className="font-black text-base md:text-base text-gray-900 break-words">hello@krvtsv.com</p>
                 </div>
               </a>
             </div>
@@ -110,12 +126,10 @@ export default function Contact() {
                 className="bg-white rounded-3xl p-8 md:p-12 text-center border-2 border-rose-100"
               >
                 <CheckCircle size={48} className="text-rose-500 mx-auto mb-4" />
-
-                <h3 className="text-xl md:text-2xl font-black uppercase text-gray-900 mb-3 break-words">
+                <h3 className="text-2xl md:text-2xl font-black uppercase text-gray-900 mb-3 break-words">
                   Заявку отримано!
                 </h3>
-
-                <p className="text-gray-500 text-sm md:text-base break-words">
+                <p className="text-gray-500 text-base sm:text-sm md:text-base break-words">
                   Зв'яжемось з тобою протягом кількох годин.
                   Поки що можеш написати напряму в Telegram.
                 </p>
@@ -126,65 +140,39 @@ export default function Contact() {
                 className="bg-white rounded-3xl p-6 md:p-10 border-2 border-rose-100 space-y-4 md:space-y-5 shadow-xl shadow-rose-500/5 w-full"
               >
                 <div>
-                  <label className="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">
-                    Ім'я
-                  </label>
-
-                  <input
-                    type="text"
-                    required
-                    value={form.name}
+                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Ім'я</label>
+                  <input type="text" required value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="Твоє ім'я"
-                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors"
-                  />
+                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
                 </div>
-
                 <div>
-                  <label className="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">
-                    Telegram або email
-                  </label>
-
-                  <input
-                    type="text"
-                    required
-                    value={form.contact}
+                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Telegram або email</label>
+                  <input type="text" required value={form.contact}
                     onChange={(e) => setForm({ ...form, contact: e.target.value })}
                     placeholder="@username або email"
-                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors"
-                  />
+                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
                 </div>
-
                 <div>
-                  <label className="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">
-                    Про проєкт
-                  </label>
-
-                  <textarea
-                    rows={4}
-                    value={form.message}
+                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Про проєкт</label>
+                  <textarea rows={4} value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Розкажи про свій проєкт..."
-                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-4 py-3 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors resize-none"
-                  />
+                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors resize-none text-base" />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-gray-900 text-white font-black uppercase tracking-widest text-xs md:text-sm py-4 rounded-full hover:bg-rose-500 transition-all duration-300 disabled:opacity-60 shadow-lg hover:shadow-rose-500/20 active:scale-95"
-                >
+                {error && (
+                  <p className="text-rose-500 text-sm font-bold text-center">{error}</p>
+                )}
+
+                <button type="submit" disabled={loading}
+                  className="w-full bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs md:text-sm py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-all duration-300 disabled:opacity-60 shadow-lg hover:shadow-rose-500/20 active:scale-95">
                   {loading ? 'Відправляємо...' : 'Відправити заявку'}
                 </button>
 
-                <p className="text-center text-[10px] text-gray-400 font-medium uppercase tracking-tighter break-words">
+                <p className="text-center text-xs text-gray-400 font-medium uppercase tracking-tighter break-words">
                   Або одразу в{' '}
-                  <a
-                    href="https://t.me/krvtsvcorp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-rose-500 font-bold hover:underline whitespace-nowrap"
-                  >
+                  <a href="https://t.me/krvtsvcorp" target="_blank" rel="noopener noreferrer" className="text-rose-500 font-bold hover:underline whitespace-nowrap">
                     Telegram
                   </a>
                 </p>
