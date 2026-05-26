@@ -11,4 +11,19 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
+
+  /* Текст никогда не вылезает за рамки */
+  * {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  img, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  input, textarea, button, select {
+    max-width: 100%;
+  }
 }

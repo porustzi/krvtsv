@@ -34,27 +34,26 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-32 bg-gray-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="process" className="py-20 sm:py-32 bg-gray-900 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-12 sm:mb-20"
         >
-          <p className="text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Як ми працюємо</p>
-          <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-black uppercase leading-tight text-white">
+          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Як ми працюємо</p>
+          <h2 className="text-[clamp(2rem,7vw,5rem)] font-black uppercase leading-tight text-white break-words">
             ПРОЦЕС<br />
             <span className="text-rose-500">БЕЗ МАГІЇ</span>
           </h2>
-          <p className="text-gray-400 mt-4 text-lg max-w-lg">
+          <p className="text-gray-400 mt-4 text-sm sm:text-base md:text-lg max-w-lg break-words">
             4 прості кроки від першого повідомлення до живого сайту.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          {/* connector line */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-px bg-rose-900 z-0" />
 
           {steps.map((step, i) => {
@@ -66,24 +65,24 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.12 }}
-                className="relative z-10 bg-gray-800 rounded-3xl p-8 hover:bg-gray-750 transition-colors group"
+                className="relative z-10 bg-gray-800 rounded-3xl p-6 sm:p-8 hover:bg-gray-750 transition-colors group"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Icon size={22} className="text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-rose-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon size={20} className="text-white" />
                   </div>
-                  <span className="text-4xl font-black text-gray-700">{step.number}</span>
+                  <span className="text-3xl sm:text-4xl font-black text-gray-700">{step.number}</span>
                 </div>
-                <h3 className="text-xl font-black uppercase tracking-wide text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-black uppercase tracking-wide text-white mb-3 break-words">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-sm">{step.desc}</p>
+                <p className="text-gray-400 leading-relaxed text-sm break-words">{step.desc}</p>
                 {step.link && (
                   <a
                     href={step.link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-4 text-rose-400 font-black text-sm uppercase tracking-widest hover:text-rose-300 transition-colors"
+                    className="inline-block mt-4 text-rose-400 font-black text-sm uppercase tracking-widest hover:text-rose-300 transition-colors whitespace-nowrap"
                   >
                     {step.link.label} →
                   </a>

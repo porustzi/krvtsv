@@ -39,7 +39,7 @@ const plans = [
 export default function Prices() {
   return (
     <section id="prices" className="py-16 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,17 +47,16 @@ export default function Prices() {
           transition={{ duration: 0.6 }}
           className="mb-12 md:mb-20 text-center lg:text-left"
         >
-          <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вартість</p>
-          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.85] text-gray-900">
+          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вартість</p>
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.85] text-gray-900 break-words">
             ПРОЗОРІ<br />
             <span className="text-rose-500">ЦІНИ</span>
           </h2>
-          <p className="text-gray-500 mt-6 text-base md:text-lg max-w-lg mx-auto lg:mx-0">
+          <p className="text-gray-500 mt-6 text-sm sm:text-base md:text-lg max-w-lg mx-auto lg:mx-0 break-words">
             Фіксована ціна без прихованих доплат. Що домовились — те й буде.
           </p>
         </motion.div>
 
-        {/* Сетка: на мобилках 1 колонка, на планшетах 2, на десктопе 4 */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {plans.map((plan, i) => (
             <motion.div
@@ -84,16 +83,16 @@ export default function Prices() {
                 <p className={`text-[10px] font-black uppercase tracking-[0.25em] mb-2 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`}>
                   {plan.duration}
                 </p>
-                <h3 className={`text-xl md:text-2xl font-black uppercase tracking-wide mb-3 ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
+                <h3 className={`text-xl md:text-2xl font-black uppercase tracking-wide mb-3 break-words ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm leading-relaxed ${plan.highlighted ? 'text-gray-400' : 'text-gray-500'}`}>
+                <p className={`text-sm leading-relaxed break-words ${plan.highlighted ? 'text-gray-400' : 'text-gray-500'}`}>
                   {plan.desc}
                 </p>
               </div>
 
               <div className="mb-8">
-                <p className={`text-3xl md:text-4xl font-black ${plan.highlighted ? 'text-rose-400' : 'text-gray-900'}`}>
+                <p className={`text-2xl sm:text-3xl md:text-4xl font-black break-words ${plan.highlighted ? 'text-rose-400' : 'text-gray-900'}`}>
                   {plan.price}
                 </p>
               </div>
@@ -102,7 +101,7 @@ export default function Prices() {
                 {plan.features.map((f) => (
                   <div key={f} className="flex items-start gap-3">
                     <Check size={16} className={`mt-0.5 flex-shrink-0 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`} />
-                    <p className={`text-sm font-medium leading-tight ${plan.highlighted ? 'text-gray-300' : 'text-gray-600'}`}>{f}</p>
+                    <p className={`text-sm font-medium leading-tight break-words ${plan.highlighted ? 'text-gray-300' : 'text-gray-600'}`}>{f}</p>
                   </div>
                 ))}
               </div>
@@ -128,7 +127,7 @@ export default function Prices() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center text-gray-400 text-[10px] md:text-sm mt-10 font-medium uppercase tracking-widest"
+          className="text-center text-gray-400 text-[10px] sm:text-sm mt-10 font-medium uppercase tracking-widest px-4 break-words"
         >
           Індивідуальні проєкти — обговорюємо ціну особисто в Telegram
         </motion.p>

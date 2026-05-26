@@ -14,33 +14,34 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setLoading(true);
 
+    // Імітація відправки
     await new Promise((r) => setTimeout(r, 1000));
 
+    // Реальна інтеграція буде додана пізніше
+    console.log('Form data:', form);
     setSent(true);
     setLoading(false);
   };
 
   return (
     <section id="contact" className="py-16 md:py-32 bg-rose-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.3fr] gap-12 lg:gap-28 items-start">
 
-          {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center lg:text-left max-w-[540px]"
+            className="text-center lg:text-left max-w-[540px] w-full"
           >
-            <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">
+            <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">
               ЗВ'ЯЗОК
             </p>
 
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 whitespace-nowrap">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 break-words">
               ДАВАЙ
               <br />
               <span className="text-rose-500 block">
@@ -48,7 +49,7 @@ export default function Contact() {
               </span>
             </h2>
 
-            <p className="text-gray-500 text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-md mx-auto lg:mx-0">
+            <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-md mx-auto lg:mx-0 break-words">
               Маєш ідею або вже точно знаєш, що хочеш?
               Напиши — відповімо протягом декількох годин
               і одразу до діла.
@@ -65,12 +66,11 @@ export default function Contact() {
                   <Send size={18} className="text-white" />
                 </div>
 
-                <div className="text-left">
+                <div className="text-left min-w-0">
                   <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold mb-0.5">
                     Telegram
                   </p>
-
-                  <p className="font-black text-sm md:text-base text-gray-900">
+                  <p className="font-black text-sm md:text-base text-gray-900 break-words">
                     @krvtsvcorp
                   </p>
                 </div>
@@ -84,12 +84,11 @@ export default function Contact() {
                   <Mail size={18} className="text-white" />
                 </div>
 
-                <div className="text-left">
+                <div className="text-left min-w-0">
                   <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold mb-0.5">
                     Email
                   </p>
-
-                  <p className="font-black text-sm md:text-base text-gray-900">
+                  <p className="font-black text-sm md:text-base text-gray-900 break-words">
                     hello@krvtsv.com
                   </p>
                 </div>
@@ -97,7 +96,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,11 +111,11 @@ export default function Contact() {
               >
                 <CheckCircle size={48} className="text-rose-500 mx-auto mb-4" />
 
-                <h3 className="text-xl md:text-2xl font-black uppercase text-gray-900 mb-3">
+                <h3 className="text-xl md:text-2xl font-black uppercase text-gray-900 mb-3 break-words">
                   Заявку отримано!
                 </h3>
 
-                <p className="text-gray-500 text-sm md:text-base">
+                <p className="text-gray-500 text-sm md:text-base break-words">
                   Зв'яжемось з тобою протягом кількох годин.
                   Поки що можеш написати напряму в Telegram.
                 </p>
@@ -179,13 +177,13 @@ export default function Contact() {
                   {loading ? 'Відправляємо...' : 'Відправити заявку'}
                 </button>
 
-                <p className="text-center text-[10px] text-gray-400 font-medium uppercase tracking-tighter">
+                <p className="text-center text-[10px] text-gray-400 font-medium uppercase tracking-tighter break-words">
                   Або одразу в{' '}
                   <a
                     href="https://t.me/krvtsvcorp"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-rose-500 font-bold hover:underline"
+                    className="text-rose-500 font-bold hover:underline whitespace-nowrap"
                   >
                     Telegram
                   </a>
