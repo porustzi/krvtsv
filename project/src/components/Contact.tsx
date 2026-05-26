@@ -2,50 +2,27 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, CheckCircle } from 'lucide-react';
 
-// 1. Створи бота в @BotFather
-// 2. Отримай токен
-// 3. Додай в Netlify: VITE_TELEGRAM_TOKEN і VITE_TELEGRAM_CHAT_ID
-const TG_TOKEN = import.meta.env.VITE_TELEGRAM_TOKEN || '';
-const TG_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID || '';
-
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', contact: '', message: '' });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    if (TG_TOKEN && TG_CHAT_ID) {
-      const text = `\u{1F4A}\u{200D}\u{1F4E8} <b>Нова заявка</b>\n\n<b>Ім'я:</b> ${form.name}\n<b>Контакт:</b> ${form.contact}\n<b>Повідомлення:</b> ${form.message}`;
-
-      try {
-        const res = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: TG_CHAT_ID,
-            text,
-            parse_mode: 'HTML',
-          }),
-        });
-
-        if (!res.ok) {
-          const data = await res.json();
-          throw new Error(data.description || 'Telegram error');
-        }
-      } catch (err: any) {
-        setError(err.message || 'Помилка відправки');
-        setLoading(false);
-        return;
-      }
-    } else {
-      // fallback — имитация
-      await new Promise((r) => setTimeout(r, 1000));
-      console.log('Form data:', form);
+    try {
+      const formData = new FormData(e.currentTarget);
+      const res = await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+      if (!res.ok) throw new Error('Помилка відправки');
+    } catch (err: any) {
+      setError(err.message || 'Помилка відправки');
+      setLoading(false);
+      return;
     }
 
     setSent(true);
@@ -65,7 +42,7 @@ export default function Contact() {
             className="text-center lg:text-left max-w-[540px] w-full"
           >
             <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">
-              ЗВ'ЯЗОК
+              КОНТАКТИ
             </p>
 
             <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 break-words">
@@ -131,32 +108,32 @@ export default function Contact() {
                 </h3>
                 <p className="text-gray-500 text-base sm:text-sm md:text-base break-words">
                   Зв'яжемось з тобою протягом кількох годин.
-                  Поки що можеш написати напряму в Telegram.
                 </p>
               </motion.div>
             ) : (
               <form
                 onSubmit={handleSubmit}
+                data-netlify="true"
+                name="contact"
                 className="bg-white rounded-3xl p-6 md:p-10 border-2 border-rose-100 space-y-4 md:space-y-5 shadow-xl shadow-rose-500/5 w-full"
               >
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div>
                   <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Ім'я</label>
-                  <input type="text" required value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  <input type="text" name="name" required
                     placeholder="Твоє ім'я"
                     className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
                 </div>
                 <div>
                   <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Telegram або email</label>
-                  <input type="text" required value={form.contact}
-                    onChange={(e) => setForm({ ...form, contact: e.target.value })}
+                  <input type="text" name="contact" required
                     placeholder="@username або email"
                     className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
                 </div>
                 <div>
                   <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Про проєкт</label>
-                  <textarea rows={4} value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  <textarea name="message" rows={4} required
                     placeholder="Розкажи про свій проєкт..."
                     className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors resize-none text-base" />
                 </div>
