@@ -99,7 +99,7 @@ export default function Prices() {
               </div>
 
               <a
-                href="https://t.me/krvtsvcorp"
+                href="https://t.me/holdingtokens"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full text-center font-black uppercase tracking-widest text-xs py-4 rounded-full transition-all duration-300 active:scale-95 ${

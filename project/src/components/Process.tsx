@@ -5,7 +5,7 @@ const steps = [
   {
     icon: Send, number: '01', title: 'Telegram',
     desc: 'Напишіть нам у Telegram — розкажіть про свій проєкт. Відповідаємо швидко, без зайвих питань.',
-    link: { label: 'Написати', href: 'https://t.me/krvtsvcorp' },
+    link: { label: 'Написати', href: 'https://t.me/holdingtokens' },
   },
   {
     icon: MessageSquare, number: '02', title: 'Обговорення',
