@@ -51,7 +51,7 @@ export default function Hero() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </a>
               <a
-                href="https://t.me/krvtsvcorp"
+                href="https://t.me/holdingtokens"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 font-black uppercase tracking-widest text-sm sm:text-xs px-8 sm:px-8 py-5 sm:py-4 rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-300 whitespace-nowrap"

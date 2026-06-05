@@ -56,7 +56,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="https://t.me/krvtsvcorp"
+            href="https://t.me/holdingtokens"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-rose-500 text-white text-[11px] font-black uppercase tracking-widest px-6 py-3 rounded-full hover:bg-gray-900 transition-all duration-300 shadow-lg shadow-rose-500/20 whitespace-nowrap"
@@ -101,7 +101,7 @@ export default function Header() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                href="https://t.me/krvtsvcorp"
+                href="https://t.me/holdingtokens"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 bg-rose-500 text-white text-base sm:text-lg font-black uppercase tracking-widest px-8 py-5 rounded-full shadow-xl shadow-rose-500/30 whitespace-nowrap"

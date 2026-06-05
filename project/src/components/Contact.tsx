@@ -61,7 +61,7 @@ export default function Contact() {
 
             <div className="space-y-4 md:space-y-6 max-w-sm mx-auto lg:mx-0">
               <a
-                href="https://t.me/krvtsvcorp"
+                href="https://t.me/holdingtokens"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 bg-white rounded-2xl px-5 py-4 md:px-6 md:py-5 border-2 border-transparent hover:border-rose-200 hover:shadow-md transition-all duration-300"
@@ -71,11 +71,11 @@ export default function Contact() {
                 </div>
                 <div className="text-left min-w-0">
                   <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-0.5">Telegram</p>
-                  <p className="font-black text-base md:text-base text-gray-900 break-words">@krvtsvcorp</p>
+                  <p className="font-black text-base md:text-base text-gray-900 break-words">@holdingtokens</p>
                 </div>
               </a>
               <a
-                href="mailto:hello@krvtsv.com"
+                href="mailto:krvtsvcorp@gmail.com"
                 className="group flex items-center gap-4 bg-white rounded-2xl px-5 py-4 md:px-6 md:py-5 border-2 border-transparent hover:border-rose-200 hover:shadow-md transition-all duration-300"
               >
                 <div className="w-12 h-12 md:w-12 md:h-12 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -83,7 +83,7 @@ export default function Contact() {
                 </div>
                 <div className="text-left min-w-0">
                   <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-0.5">Email</p>
-                  <p className="font-black text-base md:text-base text-gray-900 break-words">hello@krvtsv.com</p>
+                  <p className="font-black text-base md:text-base text-gray-900 break-words">krvtsvcorp@gmail.com</p>
                 </div>
               </a>
             </div>
@@ -149,7 +149,7 @@ export default function Contact() {
 
                 <p className="text-center text-xs text-gray-400 font-medium uppercase tracking-tighter break-words">
                   Або одразу в{' '}
-                  <a href="https://t.me/krvtsvcorp" target="_blank" rel="noopener noreferrer" className="text-rose-500 font-bold hover:underline whitespace-nowrap">
+                  <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="text-rose-500 font-bold hover:underline whitespace-nowrap">
                     Telegram
                   </a>
                 </p>
