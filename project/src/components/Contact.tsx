@@ -12,15 +12,18 @@ export default function Contact() {
     setLoading(true);
     setError('');
 
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || '';
+    const contactValue = (form.elements.namedItem('contact') as HTMLInputElement)?.value || '';
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '';
+
+    const text = `Нова заявка з сайту KRVTSV CORP%0AІм'я: ${encodeURIComponent(name)}%0AКонтакт: ${encodeURIComponent(contactValue)}%0AПовідомлення: ${encodeURIComponent(message)}`;
+    const tgUrl = `https://t.me/holdingtokens?text=${text}`;
+
     try {
-      const formData = new FormData(e.currentTarget);
-      const res = await fetch('/', {
-        method: 'POST',
-        body: formData,
-      });
-      if (!res.ok) throw new Error('Помилка відправки');
+      window.open(tgUrl, '_blank', 'noopener,noreferrer');
     } catch (err: any) {
-      setError(err.message || 'Помилка відправки');
+      setError('Не вдалося відкрити Telegram. Напишіть нам вручну: @holdingtokens');
       setLoading(false);
       return;
     }
@@ -113,11 +116,9 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                data-netlify="true"
                 name="contact"
                 className="bg-white rounded-3xl p-6 md:p-10 border-2 border-rose-100 space-y-4 md:space-y-5 shadow-xl shadow-rose-500/5 w-full"
               >
-                <input type="hidden" name="form-name" value="contact" />
 
                 <div>
                   <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Ім'я</label>
