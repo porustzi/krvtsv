@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Globe, Smartphone, ShoppingCart, Paintbrush, Search, Zap } from 'lucide-react';
+import { Globe, Smartphone, ShoppingCart, Paintbrush, Search, Zap, Code2, Server } from 'lucide-react';
 
 const services = [
   {
@@ -14,8 +14,18 @@ const services = [
   },
   {
     icon: ShoppingCart,
-    title: 'Інтернет-магазин',
-    desc: 'Веб-розробник з нуля збере магазин з кошиком, оплатою та адмінкою. Запускайте продажі онлайн швидко і без болю.',
+    title: 'Розробка e-commerce сайтів',
+    desc: 'Фуллстак веб-розробник збере інтернет-магазин з кошиком, оплатою (WayForPay/LiqPay/Stripe), фільтрами та адмінкою. Запускайте продажі онлайн швидко і без болю.',
+  },
+  {
+    icon: Code2,
+    title: 'Фуллстак розробка Україна',
+    desc: 'Frontend (React/Vite) + backend (Node.js/API/БД) під ключ. Замовити фуллстак проєкт можна дистанційно — від MVP до масштабованого продукту.',
+  },
+  {
+    icon: Server,
+    title: 'Backend та API',
+    desc: 'Проектуємо та розробляємо REST/GraphQL API, інтеграції з платіжними системами, CRM і телеграм-ботами. Надійний бекенд для вашого продукту.',
   },
   {
     icon: Paintbrush,
@@ -51,7 +61,7 @@ export default function Services() {
             <span className="text-rose-500">В УКРАЇНІ</span>
           </h2>
           <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-2xl mx-auto lg:mx-0 break-words">
-            Шукаєте надійного веб-розробника чи веб-студію в Києві? Ми створюємо сайти, які продають — від лендінгу до інтернет-магазину. Швидко, сучасно, без переплат.
+            Шукаєте надійного веб-розробника чи веб-студію в Києві? Ми створюємо сайти, які продають — від лендінгу до інтернет-магазину. Робимо фуллстак розробку (React + Node) та e-commerce проєкти під ключ. Швидко, сучасно, без переплат.
           </p>
         </motion.div>
 
@@ -82,6 +92,38 @@ export default function Services() {
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mt-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-gray-900 rounded-3xl p-8 md:p-10 text-white"
+          >
+            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-4 break-words">
+              Фуллстак розробка в Україні
+            </h3>
+            <p className="text-gray-400 leading-relaxed text-base sm:text-sm break-words">
+              Потрібен продукт «під ключ»? Беремо весь цикл: <span className="text-rose-400 font-bold">React + Vite</span> на фронті, <span className="text-rose-400 font-bold">Node.js</span> та REST/GraphQL API на бекенді, бази даних і деплой. Замовити фуллстак проєкт у веб-розробника з Києва можна дистанційно — від MVP до масштабованого SaaS.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-rose-50 rounded-3xl p-8 md:p-10"
+          >
+            <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-gray-900 mb-4 break-words">
+              Розробка e-commerce сайтів
+            </h3>
+            <p className="text-gray-500 leading-relaxed text-base sm:text-sm break-words">
+              Запускаємо інтернет-магазини з кошиком, каталогом, фільтрами та платежами (WayForPay, LiqPay, Stripe, Mono). Інтеграція з Nova Poshta, CRM і телеграм-ботом. Ціна — <span className="text-rose-600 font-black">від 15 000 грн</span>, термін — від 14 днів.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>

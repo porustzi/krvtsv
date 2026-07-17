@@ -1,13 +1,15 @@
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Advantages from './components/Advantages';
-import Services from './components/Services';
-import TopProject from './components/TopProject';
-import Prices from './components/Prices';
-import Process from './components/Process';
-import Faq from './components/Faq';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+const Advantages = lazy(() => import('./components/Advantages'));
+const Services = lazy(() => import('./components/Services'));
+const TopProject = lazy(() => import('./components/TopProject'));
+const Prices = lazy(() => import('./components/Prices'));
+const Process = lazy(() => import('./components/Process'));
+const Faq = lazy(() => import('./components/Faq'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   return (
@@ -15,13 +17,15 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Advantages />
-        <Services />
-        <TopProject />
-        <Prices />
-        <Process />
-        <Faq />
-        <Contact />
+        <Suspense fallback={null}>
+          <Advantages />
+          <Services />
+          <TopProject />
+          <Prices />
+          <Process />
+          <Faq />
+          <Contact />
+        </Suspense>
       </main>
       <Footer />
     </div>
