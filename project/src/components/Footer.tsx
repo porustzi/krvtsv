@@ -18,6 +18,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
             {[
               { label: 'Переваги', href: '#advantages' },
+              { label: 'Послуги', href: '#services' },
               { label: 'Проєкт', href: '#project' },
               { label: 'Ціни', href: '#prices' },
               { label: 'Питання', href: '#faq' },
