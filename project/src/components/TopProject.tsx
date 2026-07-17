@@ -53,7 +53,7 @@ export default function TopProject() {
                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                     <div className="w-3 h-3 rounded-full bg-green-500" />
                   </div>
-                  <div className="flex-1 bg-gray-700 rounded-full text-[10px] sm:text-xs text-gray-400 px-4 py-1 ml-2 font-mono truncate">
+                  <div className="flex-1 bg-gray-700 rounded-full text-[10px] sm:text-xs text-gray-500 px-4 py-1 ml-2 font-mono truncate">
                     lyzeum167.com
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function TopProject() {
                     <p className="text-white font-black text-xl sm:text-2xl uppercase break-words">
                       Ліцей 167
                     </p>
-                    <p className="text-rose-300 text-xs sm:text-sm font-semibold uppercase tracking-widest">
+                    <p className="text-rose-500 text-xs sm:text-sm font-semibold uppercase tracking-widest">
                       Школа у Києві
                     </p>
                   </div>
@@ -98,7 +98,7 @@ export default function TopProject() {
                 transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' as const }}
                 className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl px-5 py-4"
               >
-                <p className="text-[10px] sm:text-xs uppercase text-gray-400 font-semibold mb-1 whitespace-nowrap">
+                <p className="text-[10px] sm:text-xs uppercase text-gray-500 font-semibold mb-1 whitespace-nowrap">
                   Швидкість
                 </p>
                 <p className="text-xl sm:text-2xl font-black text-gray-900">0.8s</p>
@@ -136,7 +136,7 @@ export default function TopProject() {
             </div>
 
             <div>
-              <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-gray-400 mb-4">
+              <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-gray-500 mb-4">
                 Технічні рішення
               </p>
 
@@ -151,7 +151,7 @@ export default function TopProject() {
             </div>
 
             <div>
-              <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-gray-400 mb-4">
+              <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-gray-500 mb-4">
                 Стек технологій
               </p>
 

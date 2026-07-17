@@ -40,7 +40,7 @@ export default function Process() {
             ПРОЦЕС<br />
             <span className="text-rose-500">БЕЗ МАГІЇ</span>
           </h2>
-          <p className="text-gray-400 mt-4 text-base sm:text-sm md:text-lg max-w-lg break-words">
+          <p className="text-gray-500 mt-4 text-base sm:text-sm md:text-lg max-w-lg break-words">
             4 прості кроки від першого повідомлення до живого сайту.
           </p>
         </motion.div>
@@ -68,13 +68,13 @@ export default function Process() {
                 <h3 className="text-xl sm:text-xl font-black uppercase tracking-wide text-white mb-3 break-words">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-base sm:text-sm break-words">{step.desc}</p>
+                <p className="text-gray-500 leading-relaxed text-base sm:text-sm break-words">{step.desc}</p>
                 {step.link && (
                   <a
                     href={step.link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-4 text-rose-400 font-black text-sm uppercase tracking-widest hover:text-rose-300 transition-colors whitespace-nowrap"
+                    className="inline-block mt-4 text-rose-600 font-black text-sm uppercase tracking-widest hover:text-rose-500 transition-colors whitespace-nowrap"
                   >
                     {step.link.label} →
                   </a>

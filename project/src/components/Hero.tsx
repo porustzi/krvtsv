@@ -26,7 +26,7 @@ export default function Hero() {
               <p className="text-[clamp(1rem,4vw,1.4rem)] font-bold uppercase tracking-wide text-gray-500 break-words">
                 ШВИДКО. СТИЛЬНО. НОРМАЛЬНО.
               </p>
-              <p className="text-[clamp(1rem,4vw,1.4rem)] font-black uppercase tracking-wide text-rose-400 break-words">
+              <p className="text-[clamp(1rem,4vw,1.4rem)] font-black uppercase tracking-wide text-rose-600 break-words">
                 БЕЗ ПЕРЕПЛАТ
               </p>
             </div>
@@ -57,17 +57,17 @@ export default function Hero() {
             <div className="mt-10 sm:mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 hero-rise" style={{ animationDelay: '400ms' }}>
               <div className="flex-shrink-0">
                 <p className="text-3xl sm:text-3xl font-black text-gray-900">50+</p>
-                <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-400 font-semibold whitespace-nowrap">Проєктів</p>
+                <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-500 font-semibold whitespace-nowrap">Проєктів</p>
               </div>
               <div className="w-px h-10 sm:h-10 bg-rose-200 flex-shrink-0" />
               <div className="flex-shrink-0">
                 <p className="text-3xl sm:text-3xl font-black text-gray-900">3 дні</p>
-                <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-400 font-semibold whitespace-nowrap">Мін. терміни</p>
+                <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-500 font-semibold whitespace-nowrap">Мін. терміни</p>
               </div>
               <div className="w-px h-10 sm:h-10 bg-rose-200 flex-shrink-0" />
               <div className="flex-shrink-0">
                 <p className="text-3xl sm:text-3xl font-black text-gray-900">100%</p>
-                <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-400 font-semibold whitespace-nowrap">Задоволених</p>
+                <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-500 font-semibold whitespace-nowrap">Задоволених</p>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function Hero() {
                     >
                       <div className="w-3 h-3 rounded-full bg-rose-400 flex-shrink-0" />
                       <p className="font-black text-gray-900 uppercase tracking-wide">{item}</p>
-                      <div className="ml-auto text-xs font-bold text-rose-400 uppercase tracking-widest whitespace-nowrap">
+                      <div className="ml-auto text-xs font-bold text-rose-600 uppercase tracking-widest whitespace-nowrap">
                         {['від 3 днів', 'від 5 днів', 'від 7 днів', 'від 2 днів'][i]}
                       </div>
                     </motion.div>
@@ -108,7 +108,7 @@ export default function Hero() {
                   transition={{ delay: 0.9, duration: 0.5 }}
                   className="mt-8 bg-gray-900 rounded-2xl px-6 py-5 text-white"
                 >
-                  <p className="text-sm sm:text-xs uppercase tracking-widest text-rose-400 font-bold mb-1">Наш підхід</p>
+                  <p className="text-sm sm:text-xs uppercase tracking-widest text-rose-600 font-bold mb-1">Наш підхід</p>
                   <p className="font-black text-lg leading-tight">Прямий контакт. Без менеджерів. Без зайвих витрат.</p>
                 </motion.div>
 

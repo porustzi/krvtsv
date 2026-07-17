@@ -78,7 +78,7 @@ export default function Faq() {
                   aria-expanded={isOpen}
                 >
                   <span className="font-black uppercase tracking-wide text-gray-900 text-base sm:text-lg break-words">{item.q}</span>
-                  <span className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center ${isOpen ? 'bg-rose-500 text-white' : 'bg-gray-100 text-gray-900'}`}>
+                  <span className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center ${isOpen ? 'bg-rose-600 text-white' : 'bg-gray-100 text-gray-900'}`}>
                     {isOpen ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
                 </button>

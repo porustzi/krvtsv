@@ -73,7 +73,7 @@ export default function Contact() {
                   <Send size={20} className="text-white" />
                 </div>
                 <div className="text-left min-w-0">
-                  <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-0.5">Telegram</p>
+                  <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-0.5">Telegram</p>
                   <p className="font-black text-base md:text-base text-gray-900 break-words">@holdingtokens</p>
                 </div>
               </a>
@@ -85,7 +85,7 @@ export default function Contact() {
                   <Mail size={20} className="text-white" />
                 </div>
                 <div className="text-left min-w-0">
-                  <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-0.5">Email</p>
+                  <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-0.5">Email</p>
                   <p className="font-black text-base md:text-base text-gray-900 break-words">krvtsvcorp@gmail.com</p>
                 </div>
               </a>
@@ -121,19 +121,19 @@ export default function Contact() {
               >
 
                 <div>
-                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Ім'я</label>
+                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Ім'я</label>
                   <input type="text" name="name" required
                     placeholder="Твоє ім'я"
                     className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
                 </div>
                 <div>
-                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Telegram або email</label>
+                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Telegram або email</label>
                   <input type="text" name="contact" required
                     placeholder="@username або email"
                     className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
                 </div>
                 <div>
-                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Про проєкт</label>
+                  <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Про проєкт</label>
                   <textarea name="message" rows={4} required
                     placeholder="Розкажи про свій проєкт..."
                     className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors resize-none text-base" />
@@ -148,7 +148,7 @@ export default function Contact() {
                   {loading ? 'Відправляємо...' : 'Відправити заявку'}
                 </button>
 
-                <p className="text-center text-xs text-gray-400 font-medium uppercase tracking-tighter break-words">
+                <p className="text-center text-xs text-gray-500 font-medium uppercase tracking-tighter break-words">
                   Або одразу в{' '}
                   <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="text-rose-500 font-bold hover:underline whitespace-nowrap">
                     Telegram

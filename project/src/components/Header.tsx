@@ -60,7 +60,7 @@ export default function Header() {
             href="https://t.me/holdingtokens"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-rose-500 text-white text-[11px] font-black uppercase tracking-widest px-6 py-3 rounded-full hover:bg-gray-900 transition-all duration-300 shadow-lg shadow-rose-500/20 whitespace-nowrap"
+            className="bg-rose-600 text-white text-[11px] font-black uppercase tracking-widest px-6 py-3 rounded-full hover:bg-gray-900 transition-all duration-300 shadow-lg shadow-rose-500/20 whitespace-nowrap"
           >
             Telegram
           </a>
@@ -105,7 +105,7 @@ export default function Header() {
                 href="https://t.me/holdingtokens"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 bg-rose-500 text-white text-base sm:text-lg font-black uppercase tracking-widest px-8 py-5 rounded-full shadow-xl shadow-rose-500/30 whitespace-nowrap"
+                className="mt-4 bg-rose-600 text-white text-base sm:text-lg font-black uppercase tracking-widest px-8 py-5 rounded-full shadow-xl shadow-rose-500/30 whitespace-nowrap"
               >
                 Написати нам
               </motion.a>

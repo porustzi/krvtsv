@@ -65,26 +65,26 @@ export default function Prices() {
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-rose-500 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full whitespace-nowrap shadow-lg">
+                  <span className="bg-rose-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full whitespace-nowrap shadow-lg">
                     Популярний вибір
                   </span>
                 </div>
               )}
 
               <div className="mb-6">
-                <p className={`text-xs sm:text-[10px] font-black uppercase tracking-[0.25em] mb-2 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`}>
+                <p className={`text-xs sm:text-[10px] font-black uppercase tracking-[0.25em] mb-2 ${plan.highlighted ? 'text-rose-600' : 'text-rose-500'}`}>
                   {plan.duration}
                 </p>
                 <h3 className={`text-2xl md:text-2xl font-black uppercase tracking-wide mb-3 break-words ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-base sm:text-sm leading-relaxed break-words ${plan.highlighted ? 'text-gray-400' : 'text-gray-500'}`}>
+                <p className={`text-base sm:text-sm leading-relaxed break-words ${plan.highlighted ? 'text-gray-500' : 'text-gray-500'}`}>
                   {plan.desc}
                 </p>
               </div>
 
               <div className="mb-8">
-                <p className={`text-3xl sm:text-3xl md:text-4xl font-black break-words ${plan.highlighted ? 'text-rose-400' : 'text-gray-900'}`}>
+                <p className={`text-3xl sm:text-3xl md:text-4xl font-black break-words ${plan.highlighted ? 'text-rose-600' : 'text-gray-900'}`}>
                   {plan.price}
                 </p>
               </div>
@@ -92,7 +92,7 @@ export default function Prices() {
               <div className="space-y-3 flex-1 mb-8">
                 {plan.features.map((f) => (
                   <div key={f} className="flex items-start gap-3">
-                    <Check size={18} className={`mt-0.5 flex-shrink-0 ${plan.highlighted ? 'text-rose-400' : 'text-rose-500'}`} />
+                    <Check size={18} className={`mt-0.5 flex-shrink-0 ${plan.highlighted ? 'text-rose-600' : 'text-rose-500'}`} />
                     <p className={`text-base sm:text-sm font-medium leading-tight break-words ${plan.highlighted ? 'text-gray-300' : 'text-gray-600'}`}>{f}</p>
                   </div>
                 ))}
@@ -104,7 +104,7 @@ export default function Prices() {
                 rel="noopener noreferrer"
                 className={`w-full text-center font-black uppercase tracking-widest text-xs py-4 rounded-full transition-all duration-300 active:scale-95 ${
                   plan.highlighted
-                    ? 'bg-rose-500 text-white hover:bg-rose-400'
+                    ? 'bg-rose-600 text-white hover:bg-rose-400'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-900 hover:text-white'
                 }`}
               >
@@ -119,7 +119,7 @@ export default function Prices() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center text-gray-400 text-xs sm:text-[10px] mt-10 font-medium uppercase tracking-widest px-4 break-words"
+          className="text-center text-gray-500 text-xs sm:text-[10px] mt-10 font-medium uppercase tracking-widest px-4 break-words"
         >
           Індивідуальні проєкти — обговорюємо ціну особисто в Telegram
         </motion.p>
