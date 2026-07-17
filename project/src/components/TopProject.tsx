@@ -59,17 +59,26 @@ export default function TopProject() {
                 </div>
 
                 <div className="relative overflow-hidden" style={{ aspectRatio: '16/10' }}>
-                  <img
-                    ref={imgRef}
-                    src="https://lh5.googleusercontent.com/p/AF1QipO0XUAiZ7Qh1RjzOSv-u1DY1jYA8gya8Hf4je02=w800-h500-k-no"
-                    alt="School Portal UI"
-                    className="w-full h-full object-cover"
-                    onError={() => {
-                      if (imgRef.current && imgRef.current.src !== FALLBACK_IMG) {
-                        imgRef.current.src = FALLBACK_IMG;
-                      }
-                    }}
-                  />
+                  <picture>
+                    <source srcSet="/images/school.avif" type="image/avif" />
+                    <source srcSet="/images/school.webp" type="image/webp" />
+                    <img
+                      ref={imgRef}
+                      src="/images/school.webp"
+                      alt="School Portal UI — Ліцей 167"
+                      width={800}
+                      height={500}
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
+                      className="w-full h-full object-cover"
+                      onError={() => {
+                        if (imgRef.current && imgRef.current.src !== FALLBACK_IMG) {
+                          imgRef.current.src = FALLBACK_IMG;
+                        }
+                      }}
+                    />
+                  </picture>
 
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
 
