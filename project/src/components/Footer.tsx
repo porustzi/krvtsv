@@ -20,6 +20,7 @@ export default function Footer() {
               { label: 'Переваги', href: '#advantages' },
               { label: 'Проєкт', href: '#project' },
               { label: 'Ціни', href: '#prices' },
+              { label: 'Питання', href: '#faq' },
               { label: 'Контакти', href: '#contact' },
             ].map((l) => (
               <a

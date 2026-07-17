@@ -7,6 +7,7 @@ const links = [
   { label: 'Проєкт', href: '#project' },
   { label: 'Ціни', href: '#prices' },
   { label: 'Процес', href: '#process' },
+  { label: 'Питання', href: '#faq' },
   { label: 'Контакти', href: '#contact' },
 ];
 

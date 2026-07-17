@@ -4,6 +4,7 @@ import Advantages from './components/Advantages';
 import TopProject from './components/TopProject';
 import Prices from './components/Prices';
 import Process from './components/Process';
+import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -17,6 +18,7 @@ function App() {
         <TopProject />
         <Prices />
         <Process />
+        <Faq />
         <Contact />
       </main>
       <Footer />
