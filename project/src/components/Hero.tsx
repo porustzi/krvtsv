@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Send } from 'lucide-react';
 
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 60 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.7, delay, ease: 'easeOut' as const },
-});
-
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-28 pb-16">
@@ -18,31 +11,31 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="min-w-0">
-            <motion.div {...fadeUp(0)} className="mb-4">
+            <div className="mb-4 hero-rise" style={{ animationDelay: '0ms' }}>
               <span className="inline-block text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 bg-rose-50 px-4 sm:px-4 py-3 sm:py-2 rounded-full">
                 Веб-студія / Ukraine
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h1 {...fadeUp(0.1)} className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-4 break-words">
+            <h1 className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-4 break-words hero-rise" style={{ animationDelay: '80ms' }}>
               САЙТИ, ЯКІ<br />
               <span className="text-rose-500">ПРОДАЮТЬ</span>
-            </motion.h1>
+            </h1>
 
-            <motion.div {...fadeUp(0.25)} className="mt-6 mb-4">
+            <div className="mt-6 mb-4 hero-rise" style={{ animationDelay: '160ms' }}>
               <p className="text-[clamp(1rem,4vw,1.4rem)] font-bold uppercase tracking-wide text-gray-500 break-words">
                 ШВИДКО. СТИЛЬНО. НОРМАЛЬНО.
               </p>
               <p className="text-[clamp(1rem,4vw,1.4rem)] font-black uppercase tracking-wide text-rose-400 break-words">
                 БЕЗ ПЕРЕПЛАТ
               </p>
-            </motion.div>
+            </div>
 
-            <motion.p {...fadeUp(0.35)} className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-md mb-10 break-words">
+            <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-md mb-10 break-words hero-rise" style={{ animationDelay: '240ms' }}>
               Створюємо сайти, що реально працюють на ваш бізнес — без зайвих слів та корпоративного нудного дизайну.
-            </motion.p>
+            </p>
 
-            <motion.div {...fadeUp(0.45)} className="flex flex-wrap gap-3 sm:gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4 hero-rise" style={{ animationDelay: '320ms' }}>
               <a
                 href="#project"
                 className="group inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs px-8 sm:px-8 py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-colors duration-300 whitespace-nowrap"
@@ -59,9 +52,9 @@ export default function Hero() {
                 <Send size={18} className="flex-shrink-0" />
                 Telegram
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div {...fadeUp(0.55)} className="mt-10 sm:mt-12 flex flex-wrap items-center gap-x-8 gap-y-3">
+            <div className="mt-10 sm:mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 hero-rise" style={{ animationDelay: '400ms' }}>
               <div className="flex-shrink-0">
                 <p className="text-3xl sm:text-3xl font-black text-gray-900">50+</p>
                 <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-400 font-semibold whitespace-nowrap">Проєктів</p>
@@ -76,7 +69,7 @@ export default function Hero() {
                 <p className="text-3xl sm:text-3xl font-black text-gray-900">100%</p>
                 <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-400 font-semibold whitespace-nowrap">Задоволених</p>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           <motion.div
