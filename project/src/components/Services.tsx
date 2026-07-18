@@ -53,11 +53,8 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-20 md:py-32 bg-white overflow-hidden">
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-rose-200/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-rose-200/40 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
+    <section id="services" className="relative py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,11 +63,7 @@ export default function Services() {
           className="mb-12 md:mb-20 text-center lg:text-left"
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Послуги</p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] text-gray-900 break-words">
-            Що ми<br />
-            <span className="bg-gradient-to-r from-rose-500 to-red-600 bg-clip-text text-transparent">робимо</span>
-          </h2>
-          <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-2xl mx-auto lg:mx-0 break-words">
+          <p className="text-gray-500 mt-2 text-base sm:text-sm md:text-lg max-w-2xl mx-auto lg:mx-0 break-words">
             Шукаєте надійного веб-розробника чи веб-студію в Києві? Ми створюємо сайти, які продають — від лендінгу до інтернет-магазину. Швидко, сучасно, без переплат.
           </p>
         </motion.div>

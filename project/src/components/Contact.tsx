@@ -34,11 +34,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 md:py-32 bg-rose-50 overflow-hidden">
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-rose-200/50 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-rose-200/50 rounded-full blur-3xl pointer-events-none" />
+    <section id="contact" className="relative py-16 md:py-24 bg-rose-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.3fr] gap-12 lg:gap-28 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.3fr] gap-12 lg:gap-16 items-start">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

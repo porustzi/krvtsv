@@ -31,7 +31,7 @@ const plans = [
 
 export default function Prices() {
   return (
-    <section id="prices" className="py-20 md:py-32 bg-white overflow-hidden">
+    <section id="prices" className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -43,7 +43,7 @@ export default function Prices() {
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вартість</p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] text-gray-900 break-words">
             Прозорі<br />
-            <span className="bg-gradient-to-r from-rose-500 to-red-600 bg-clip-text text-transparent">ціни</span>
+            <span className="text-rose-500">ціни</span>
           </h2>
           <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-lg mx-auto lg:mx-0 break-words">
             Фіксована ціна без прихованих доплат. Що домовились — те й буде.

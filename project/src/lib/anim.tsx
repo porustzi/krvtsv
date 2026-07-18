@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, type ReactNode, type MouseEvent } from 'react';
+import { useRef, useEffect, type ReactNode, type MouseEvent } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 /* ---------- Magnetic: элемент тянется к курсору ---------- */
@@ -200,48 +200,6 @@ export function Reveal({
     >
       {children}
     </motion.div>
-  );
-}
-
-/* ---------- CursorGlow: м'яка підсвітка курсора (тільки десктоп, без приховування системного курсора) ---------- */
-export function CursorGlow() {
-  const x = useMotionValue(-100);
-  const y = useMotionValue(-100);
-  const sx = useSpring(x, { stiffness: 350, damping: 28, mass: 0.3 });
-  const sy = useSpring(y, { stiffness: 350, damping: 28, mass: 0.3 });
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const coarse = window.matchMedia('(pointer: coarse)').matches;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (coarse || reduce) return;
-    setEnabled(true);
-    const move = (e: globalThis.MouseEvent) => {
-      x.set(e.clientX);
-      y.set(e.clientY);
-    };
-    window.addEventListener('mousemove', move);
-    return () => window.removeEventListener('mousemove', move);
-  }, [x, y]);
-
-  if (!enabled) return null;
-
-  return (
-    <>
-      <motion.div
-        style={{ x: sx, y: sy }}
-        className="pointer-events-none fixed top-0 left-0 z-[150] hidden md:block"
-      >
-        <div className="relative -ml-10 -mt-10 h-20 w-20 rounded-full bg-gradient-to-br from-rose-400/30 to-red-500/30 blur-2xl" />
-      </motion.div>
-      <motion.div
-        style={{ x: sx, y: sy }}
-        className="pointer-events-none fixed top-0 left-0 z-[150] hidden md:block"
-      >
-        <div className="relative -ml-1 -mt-1 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-rose-200/60" />
-      </motion.div>
-    </>
   );
 }
 

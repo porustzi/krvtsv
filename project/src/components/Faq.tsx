@@ -52,7 +52,7 @@ export default function Faq() {
   };
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-white overflow-hidden">
+    <section id="faq" className="py-16 md:py-24 bg-white overflow-hidden">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -65,7 +65,7 @@ export default function Faq() {
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">FAQ</p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.9] text-gray-900 break-words">
             Питання<br />
-            <span className="bg-gradient-to-r from-rose-500 to-red-600 bg-clip-text text-transparent">та відповіді</span>
+            <span className="text-rose-500">та відповіді</span>
           </h2>
         </motion.div>
 

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Send } from 'lucide-react';
-import { Magnetic, AnimatedGradientText, Parallax } from '../lib/anim';
+import { Magnetic, Parallax } from '../lib/anim';
 
 const slogan = ['С', 'А', 'Й', 'Т', 'И', ',', ' ', 'Я', 'К', 'І', ' '];
 
@@ -49,7 +49,7 @@ export default function Hero() {
                 ))}
               </span>
               <br />
-              <AnimatedGradientText> ПРОДАЮТЬ</AnimatedGradientText>
+              <span className="text-rose-500"> ПРОДАЮТЬ</span>
             </h1>
 
             <div className="mt-6 mb-4 hero-rise" style={{ animationDelay: '160ms' }}>
@@ -90,7 +90,7 @@ export default function Hero() {
 
             <div className="mt-10 sm:mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 hero-rise" style={{ animationDelay: '400ms' }}>
               <div className="flex-shrink-0">
-                <p className="text-3xl sm:text-3xl font-black bg-gradient-to-r from-rose-500 to-red-600 bg-clip-text text-transparent">3+</p>
+                <p className="text-3xl sm:text-3xl font-black text-rose-500">3+</p>
                 <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-500 font-semibold whitespace-nowrap">Проєкти</p>
               </div>
               <div className="w-px h-10 sm:h-10 bg-rose-200 flex-shrink-0" />
