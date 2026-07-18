@@ -60,9 +60,9 @@ export default function Services() {
           className="mb-12 md:mb-20 text-center lg:text-left"
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Послуги</p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase leading-[0.9] text-gray-900 break-words">
-            ЗАМОВИТИ ВЕБ-САЙТ<br />
-            <span className="text-rose-500">В УКРАЇНІ</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] text-gray-900 break-words">
+            Замовити веб-сайт<br />
+            <span className="text-rose-500">в Україні</span>
           </h2>
           <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-2xl mx-auto lg:mx-0 break-words">
             Шукаєте надійного веб-розробника чи веб-студію в Києві? Ми створюємо сайти, які продають — від лендінгу до інтернет-магазину. Робимо фуллстак розробку (React + Node) та e-commerce проєкти під ключ. Швидко, сучасно, без переплат.

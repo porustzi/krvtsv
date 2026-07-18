@@ -40,9 +40,9 @@ export default function Prices() {
           className="mb-12 md:mb-20 text-center lg:text-left"
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вартість</p>
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.85] text-gray-900 break-words">
-            ПРОЗОРІ<br />
-            <span className="text-rose-500">ЦІНИ</span>
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] text-gray-900 break-words">
+            Прозорі<br />
+            <span className="text-rose-500">ціни</span>
           </h2>
           <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-lg mx-auto lg:mx-0 break-words">
             Фіксована ціна без прихованих доплат. Що домовились — те й буде.

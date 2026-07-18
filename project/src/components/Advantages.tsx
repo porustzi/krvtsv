@@ -10,7 +10,7 @@ const items = [
   {
     icon: Zap, title: 'Швидкий запуск',
     desc: 'Лендінг за 3 дні. Без затягувань, без "ще трошки доробимо". Дедлайн — священний.',
-    accent: 'bg-pink-400', number: '02',
+    accent: 'bg-rose-500', number: '02',
   },
   {
     icon: MessageCircle, title: 'Прямий контакт',
@@ -20,7 +20,7 @@ const items = [
   {
     icon: Palette, title: 'Сучасний дизайн',
     desc: 'Не шаблони з Envato. Кожен проєкт — унікальне рішення з характером.',
-    accent: 'bg-pink-500', number: '04',
+    accent: 'bg-rose-600', number: '04',
   },
   {
     icon: Smartphone, title: 'Адаптивність',
@@ -41,9 +41,9 @@ export default function Advantages() {
           className="mb-12 md:mb-20 text-center lg:text-left"
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Чому ми</p>
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.85] text-gray-900 break-words">
-            П'ЯТЬ ПРИЧИН<br />
-            <span className="text-rose-500">ОБРАТИ НАС</span>
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] text-gray-900 break-words">
+            П'ять причин<br />
+            <span className="text-rose-500">обрати нас</span>
           </h2>
         </motion.div>
 

@@ -36,10 +36,6 @@ const faqs = [
     a: 'Так, повністю дистанційно. Напишіть у Telegram @holdingtokens або на пошту — обговоримо завдання, погодимо структуру і запустимо сайт без особистих зустрічей.',
   },
   {
-    q: 'Скільки коштує веб-розробник для сайту під ключ?',
-    a: 'Вартість залежить від типу сайту: лендінг — від 4000 грн, бізнес-сайт — від 10000 грн, магазин — від 15000 грн. Фіксована ціна без прихованих доплат.',
-  },
-  {
     q: 'Що входить у фуллстак розробку?',
     a: 'Повний цикл: фронтенд на React/Vite, бекенд на Node.js з REST або GraphQL API, база даних, авторизація, інтеграції (платежі, CRM, боти) і деплой. Один виконавець = менше комунікації і швидший запуск.',
   },
@@ -74,9 +70,9 @@ export default function Faq() {
           className="mb-12 md:mb-16 text-center"
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">FAQ</p>
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase leading-[0.85] text-gray-900 break-words">
-            ПИТАННЯ<br />
-            <span className="text-rose-500">ТА ВІДПОВІДІ</span>
+          <h2 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.9] text-gray-900 break-words">
+            Питання<br />
+            <span className="text-rose-500">та відповіді</span>
           </h2>
         </motion.div>
 

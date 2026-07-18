@@ -44,9 +44,9 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-black tracking-tighter text-gray-900 hover:text-rose-500 transition-colors z-[110] whitespace-nowrap">
+        <Link to="/" className="text-xl font-black tracking-tighter text-gray-900 hover:text-rose-500 transition-colors z-[110] whitespace-nowrap">
           KRVTSV<span className="text-rose-500"> CORP</span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map((l) => (
