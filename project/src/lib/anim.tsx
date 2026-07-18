@@ -1,4 +1,4 @@
-import { useRef, type ReactNode, type MouseEvent } from 'react';
+import { useRef, useEffect, type ReactNode, type MouseEvent } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 /* ---------- Magnetic: элемент тянется к курсору ---------- */
@@ -146,7 +146,7 @@ export function AnimatedGradientText({
 }) {
   return (
     <motion.span
-      className={`bg-[linear-gradient(110deg,#f43f5e,#a855f7,#ec4899,#f43f5e)] bg-[length:200%_auto] bg-clip-text text-transparent ${className ?? ''}`}
+      className={`bg-[linear-gradient(110deg,#e11d48,#f43f5e,#fb7185,#e11d48)] bg-[length:200%_auto] bg-clip-text text-transparent ${className ?? ''}`}
       animate={{ backgroundPosition: ['0% 50%', '200% 50%', '0% 50%'] }}
       transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
     >
@@ -159,7 +159,7 @@ export function AnimatedGradientText({
 export function ScrollProgress() {
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-1 z-[200] origin-left bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500"
+      className="fixed top-0 left-0 right-0 h-1 z-[200] origin-left bg-gradient-to-r from-rose-500 via-red-500 to-rose-700"
       style={{ scaleX: useTransform(useSpring(useProgressValue(), { stiffness: 120, damping: 30 }), [0, 1], [0, 1]) }}
     />
   );
@@ -198,6 +198,82 @@ export function Reveal({
       transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
+      {children}
+    </motion.div>
+  );
+}
+
+/* ---------- CursorGlow: кастомний курсор-блоб (тільки десктоп) ---------- */
+export function CursorGlow() {
+  const x = useMotionValue(-100);
+  const y = useMotionValue(-100);
+  const sx = useSpring(x, { stiffness: 300, damping: 30, mass: 0.4 });
+  const sy = useSpring(y, { stiffness: 300, damping: 30, mass: 0.4 });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.body.style.cursor = 'none';
+    const move = (e: globalThis.MouseEvent) => {
+      x.set(e.clientX);
+      y.set(e.clientY);
+    };
+    window.addEventListener('mousemove', move);
+    return () => {
+      window.removeEventListener('mousemove', move);
+      document.body.style.cursor = '';
+    };
+  }, [x, y]);
+
+  return (
+    <>
+      <motion.div
+        style={{ x: sx, y: sy }}
+        className="pointer-events-none fixed top-0 left-0 z-[300] hidden md:block"
+      >
+        <div className="relative -ml-8 -mt-8 h-16 w-16 rounded-full bg-gradient-to-br from-rose-400/40 to-red-500/40 blur-xl" />
+      </motion.div>
+      <motion.div
+        style={{ x: sx, y: sy }}
+        className="pointer-events-none fixed top-0 left-0 z-[300] hidden md:block mix-blend-difference"
+      >
+        <div className="relative -ml-1 -mt-1 h-2 w-2 rounded-full bg-white" />
+      </motion.div>
+    </>
+  );
+}
+
+/* ---------- Parallax: шар рухається від скролу ---------- */
+export function Parallax({
+  children,
+  className,
+  amount = 60,
+}: {
+  children: ReactNode;
+  className?: string;
+  amount?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const y = useMotionValue(0);
+  const sy = useSpring(y, { stiffness: 100, damping: 30 });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const onScroll = () => {
+      const r = el.getBoundingClientRect();
+      const center = r.top + r.height / 2 - window.innerHeight / 2;
+      y.set((-center / window.innerHeight) * amount);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [y, amount]);
+
+  return (
+    <motion.div ref={ref} style={{ y: sy }} className={className}>
       {children}
     </motion.div>
   );

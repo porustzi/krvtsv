@@ -13,7 +13,7 @@ export default function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <Link to="/" className="text-xl sm:text-2xl font-black tracking-tight whitespace-nowrap">
-            KRVTSV<span className="bg-gradient-to-r from-rose-400 to-violet-400 bg-clip-text text-transparent"> CORP</span>
+            KRVTSV<span className="bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent"> CORP</span>
           </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">

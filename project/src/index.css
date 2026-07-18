@@ -76,8 +76,23 @@
     overflow-wrap: break-word;
   }
 
-  /* На мобильных убираем агрессивный трекинг, из-за которого текст "разъезжается" и читается как мусор */
+  /* На мобильных: чёткий, жирный шрифт (без тонких букв) */
   @media (max-width: 640px) {
+    body {
+      /* убираем сглаживание, которое делает тонкий шрифт "мыльным" на телефоне */
+      -webkit-font-smoothing: auto;
+      -moz-osx-font-smoothing: auto;
+      text-rendering: optimizeLegibility;
+      font-weight: 500;
+    }
+    /* минимальный вес текста на мобиле — 500, чтобы буквы не были ниточками */
+    p, span, a, li, div, h1, h2, h3, h4, h5, label, button, input, textarea {
+      font-weight: 500;
+    }
+    h1, h2, h3, h4, h5 { font-weight: 800; }
+    .font-black { font-weight: 900 !important; }
+    .font-bold { font-weight: 700 !important; }
+
     [class*="tracking-[0"] ,
     [class*="tracking-widest"],
     [class*="tracking-[0.3em]"],

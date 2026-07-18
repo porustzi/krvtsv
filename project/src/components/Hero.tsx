@@ -1,23 +1,27 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Send } from 'lucide-react';
-import { Magnetic, AnimatedGradientText } from '../lib/anim';
+import { Magnetic, AnimatedGradientText, Parallax } from '../lib/anim';
 
 const slogan = ['С', 'А', 'Й', 'Т', 'И', ',', ' ', 'Я', 'К', 'І', ' ', 'П', 'Р', 'О', 'Д', 'А', 'Ю', 'Т', 'Ь'];
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-28 pb-16">
-      <div className="absolute inset-0 -z-10">
-        <motion.div
-          animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-rose-300 to-pink-200 rounded-full blur-3xl opacity-60"
-        />
-        <motion.div
-          animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute bottom-[-15%] left-[-10%] w-[500px] h-[500px] bg-gradient-to-tr from-violet-200 to-fuchsia-200 rounded-full blur-3xl opacity-50"
-        />
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <Parallax amount={80} className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px]">
+          <motion.div
+            animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
+            transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+            className="w-[600px] h-[600px] bg-gradient-to-br from-rose-300 to-pink-200 rounded-full blur-3xl opacity-60"
+          />
+        </Parallax>
+        <Parallax amount={-60} className="absolute bottom-[-15%] left-[-10%] w-[500px] h-[500px]">
+          <motion.div
+            animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
+            transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+            className="w-[500px] h-[500px] bg-gradient-to-tr from-rose-200 to-red-200 rounded-full blur-3xl opacity-50"
+          />
+        </Parallax>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(255,255,255,0.6)_100%)]" />
       </div>
 
@@ -86,7 +90,7 @@ export default function Hero() {
 
             <div className="mt-10 sm:mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 hero-rise" style={{ animationDelay: '400ms' }}>
               <div className="flex-shrink-0">
-                <p className="text-3xl sm:text-3xl font-black bg-gradient-to-r from-rose-500 to-violet-500 bg-clip-text text-transparent">3+</p>
+                <p className="text-3xl sm:text-3xl font-black bg-gradient-to-r from-rose-500 to-red-600 bg-clip-text text-transparent">3+</p>
                 <p className="text-xs sm:text-[10px] uppercase tracking-widest text-gray-500 font-semibold whitespace-nowrap">Проєкти</p>
               </div>
               <div className="w-px h-10 sm:h-10 bg-rose-200 flex-shrink-0" />
@@ -110,12 +114,12 @@ export default function Hero() {
             className="hidden lg:block"
           >
             <div className="relative">
-              <div className="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-rose-400 to-violet-400 rounded-3xl opacity-20 blur-xl" />
+                <div className="absolute -top-6 -left-6 w-full h-full bg-gradient-to-br from-rose-400 to-red-500 rounded-3xl opacity-20 blur-xl" />
               <div className="relative bg-white/70 backdrop-blur-xl border border-white rounded-3xl p-8 lg:p-10 overflow-hidden shadow-2xl shadow-rose-500/10">
                 <div className="space-y-4">
                   {[
                     { name: 'Landing Page', meta: 'від 3 днів', tint: 'from-rose-500 to-pink-500' },
-                    { name: 'Business Site', meta: 'від 5 днів', tint: 'from-violet-500 to-fuchsia-500' },
+                    { name: 'Business Site', meta: 'від 5 днів', tint: 'from-rose-600 to-red-500' },
                     { name: 'E-commerce', meta: 'від 7 днів', tint: 'from-amber-500 to-orange-500' },
                     { name: 'Redesign', meta: 'від 2 днів', tint: 'from-emerald-500 to-teal-500' },
                   ].map((item, i) => (
@@ -150,7 +154,7 @@ export default function Hero() {
                   <p className="font-black text-lg leading-tight">Прямий контакт. Без менеджерів. Без зайвих витрат.</p>
                 </motion.div>
 
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-rose-400 to-violet-400 rounded-full opacity-30 blur-lg" />
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-rose-400 to-red-500 rounded-full opacity-30 blur-lg" />
               </div>
             </div>
           </motion.div>

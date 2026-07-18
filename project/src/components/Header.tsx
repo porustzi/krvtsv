@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ScrollProgress } from '../lib/anim';
+import { ScrollProgress, CursorGlow } from '../lib/anim';
 
 const links = [
   { label: 'Переваги', href: '/#advantages' },
@@ -39,6 +39,7 @@ export default function Header() {
   return (
     <>
     <ScrollProgress />
+    <CursorGlow />
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

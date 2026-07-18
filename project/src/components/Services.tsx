@@ -19,7 +19,7 @@ const services = [
     desc: 'Повноцінний сайт для бізнесу: до 10 сторінок, унікальний дизайн, CMS та аналітика.',
     price: 'від 10 000 грн',
     href: '/services/web-developer-kyiv',
-    tint: 'from-violet-500 to-fuchsia-500',
+    tint: 'from-rose-600 to-red-500',
     raw: 'rgba(168,85,247',
   },
   {
@@ -55,7 +55,7 @@ export default function Services() {
   return (
     <section id="services" className="relative py-20 md:py-32 bg-white overflow-hidden">
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-rose-200/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-violet-200/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-rose-200/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 md:px-6">
         <motion.div
@@ -68,7 +68,7 @@ export default function Services() {
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Послуги</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] text-gray-900 break-words">
             Замовити веб-сайт<br />
-            <span className="bg-gradient-to-r from-rose-500 to-violet-500 bg-clip-text text-transparent">в Україні</span>
+            <span className="bg-gradient-to-r from-rose-500 to-red-500 bg-clip-text text-transparent">в Україні</span>
           </h2>
           <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-2xl mx-auto lg:mx-0 break-words">
             Шукаєте надійного веб-розробника чи веб-студію в Києві? Ми створюємо сайти, які продають — від лендінгу до інтернет-магазину. Швидко, сучасно, без переплат.

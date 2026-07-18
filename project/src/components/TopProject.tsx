@@ -197,7 +197,7 @@ export default function TopProject() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch [perspective:1200px]">
           {cases.map((item, i) => (
-            <Tilt key={item.name} className="h-full" max={6}>
+            <Tilt key={item.name} className="h-full" max={12}>
               <CaseCard item={item} i={i} />
             </Tilt>
           ))}
