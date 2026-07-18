@@ -67,12 +67,26 @@
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
-  /* Текст никогда не вылезает за рамки */
+  /* Текст никогда не вылезает за рамки (но НЕ режем слова посередине на мобилке) */
   * {
     overflow-wrap: break-word;
-    word-break: break-word;
+  }
+
+  /* На мобильных убираем агрессивный трекинг, из-за которого текст "разъезжается" и читается как мусор */
+  @media (max-width: 640px) {
+    [class*="tracking-[0"] ,
+    [class*="tracking-widest"],
+    [class*="tracking-[0.3em]"],
+    [class*="tracking-[0.25em]"] {
+      letter-spacing: 0.02em !important;
+    }
+    [class*="text-[10px]"], [class*="text-[11px]"], [class*="text-xs"] {
+      letter-spacing: 0.02em !important;
+    }
   }
 
   img, video, canvas, svg {

@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import Fullstack from './pages/Fullstack';
 import Ecommerce from './pages/Ecommerce';
+import WebDeveloperKyiv from './pages/WebDeveloperKyiv';
 import BlogReactVite from './pages/BlogReactVite';
 
 function renderRoute(path: string, node: React.ReactNode) {
@@ -26,6 +27,7 @@ export function render() {
     '/': renderRoute('/', h(Home)),
     '/services/fullstack': renderRoute('/services/fullstack', h(Fullstack)),
     '/services/ecommerce': renderRoute('/services/ecommerce', h(Ecommerce)),
+    '/services/web-developer-kyiv': renderRoute('/services/web-developer-kyiv', h(WebDeveloperKyiv)),
     '/blog/react-vite': renderRoute('/blog/react-vite', h(BlogReactVite)),
   };
 }
