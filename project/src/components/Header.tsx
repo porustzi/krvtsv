@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { ScrollProgress } from '../lib/anim';
+import NavLink from './NavLink';
 
 const links = [
   { label: 'Переваги', href: '/#advantages' },
@@ -47,19 +47,19 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-xl font-black tracking-tighter text-gray-900 hover:text-rose-500 transition-colors z-[110] whitespace-nowrap">
+        <NavLink to="/" className="text-xl font-black tracking-tighter text-gray-900 hover:text-rose-500 transition-colors z-[110] whitespace-nowrap">
           KRVTSV<span className="text-rose-500"> CORP</span>
-        </Link>
+        </NavLink>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map((l) => (
-            <Link
+            <NavLink
               key={l.href}
               to={l.href}
               className="text-[11px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-rose-500 transition-colors whitespace-nowrap"
             >
               {l.label}
-            </Link>
+            </NavLink>
           ))}
           <a
             href="https://t.me/holdingtokens"
@@ -97,13 +97,13 @@ export default function Header() {
                   transition={{ delay: 0.1 + i * 0.1 }}
                   key={l.href}
                 >
-                  <Link
+                  <NavLink
                     to={l.href}
                     onClick={() => setOpen(false)}
                     className="text-2xl sm:text-3xl font-black uppercase tracking-tighter text-gray-900 hover:text-rose-500 transition-colors break-words"
                   >
                     {l.label}
-                  </Link>
+                  </NavLink>
                 </motion.div>
               ))}
               <motion.a
