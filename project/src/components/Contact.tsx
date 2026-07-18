@@ -52,10 +52,11 @@ export default function Contact() {
             </p>
 
             <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 break-words">
-              ДАВАЙ
+              <span className="whitespace-pre-wrap">ДАВАЙ{' '}
               <br />
-              <span className="text-rose-500 block">
+              <span className="text-rose-500">
                 ПОГОВОРИМО
+              </span>
               </span>
             </h2>
 

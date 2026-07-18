@@ -67,8 +67,8 @@ export default function Services() {
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Послуги</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] text-gray-900 break-words">
-            Замовити веб-сайт<br />
-            <span className="bg-gradient-to-r from-rose-500 to-red-500 bg-clip-text text-transparent">в Україні</span>
+            Що ми<br />
+            <span className="bg-gradient-to-r from-rose-500 to-red-600 bg-clip-text text-transparent">робимо</span>
           </h2>
           <p className="text-gray-500 mt-6 text-base sm:text-sm md:text-lg max-w-2xl mx-auto lg:mx-0 break-words">
             Шукаєте надійного веб-розробника чи веб-студію в Києві? Ми створюємо сайти, які продають — від лендінгу до інтернет-магазину. Швидко, сучасно, без переплат.

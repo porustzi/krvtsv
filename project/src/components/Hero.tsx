@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Send } from 'lucide-react';
 import { Magnetic, AnimatedGradientText, Parallax } from '../lib/anim';
 
-const slogan = ['С', 'А', 'Й', 'Т', 'И', ',', ' ', 'Я', 'К', 'І', ' ', 'П', 'Р', 'О', 'Д', 'А', 'Ю', 'Т', 'Ь'];
+const slogan = ['С', 'А', 'Й', 'Т', 'И', ',', ' ', 'Я', 'К', 'І', ' '];
 
 export default function Hero() {
   return (
@@ -49,7 +49,7 @@ export default function Hero() {
                 ))}
               </span>
               <br />
-              <AnimatedGradientText>ПРОДАЮТЬ</AnimatedGradientText>
+              <AnimatedGradientText> ПРОДАЮТЬ</AnimatedGradientText>
             </h1>
 
             <div className="mt-6 mb-4 hero-rise" style={{ animationDelay: '160ms' }}>

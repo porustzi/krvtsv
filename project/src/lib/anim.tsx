@@ -1,4 +1,4 @@
-import { useRef, useEffect, type ReactNode, type MouseEvent } from 'react';
+import { useRef, useEffect, useState, type ReactNode, type MouseEvent } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 /* ---------- Magnetic: элемент тянется к курсору ---------- */
@@ -203,42 +203,43 @@ export function Reveal({
   );
 }
 
-/* ---------- CursorGlow: кастомний курсор-блоб (тільки десктоп) ---------- */
+/* ---------- CursorGlow: м'яка підсвітка курсора (тільки десктоп, без приховування системного курсора) ---------- */
 export function CursorGlow() {
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
-  const sx = useSpring(x, { stiffness: 300, damping: 30, mass: 0.4 });
-  const sy = useSpring(y, { stiffness: 300, damping: 30, mass: 0.4 });
+  const sx = useSpring(x, { stiffness: 350, damping: 28, mass: 0.3 });
+  const sy = useSpring(y, { stiffness: 350, damping: 28, mass: 0.3 });
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    if (window.matchMedia('(pointer: coarse)').matches) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    document.body.style.cursor = 'none';
+    const coarse = window.matchMedia('(pointer: coarse)').matches;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (coarse || reduce) return;
+    setEnabled(true);
     const move = (e: globalThis.MouseEvent) => {
       x.set(e.clientX);
       y.set(e.clientY);
     };
     window.addEventListener('mousemove', move);
-    return () => {
-      window.removeEventListener('mousemove', move);
-      document.body.style.cursor = '';
-    };
+    return () => window.removeEventListener('mousemove', move);
   }, [x, y]);
+
+  if (!enabled) return null;
 
   return (
     <>
       <motion.div
         style={{ x: sx, y: sy }}
-        className="pointer-events-none fixed top-0 left-0 z-[300] hidden md:block"
+        className="pointer-events-none fixed top-0 left-0 z-[150] hidden md:block"
       >
-        <div className="relative -ml-8 -mt-8 h-16 w-16 rounded-full bg-gradient-to-br from-rose-400/40 to-red-500/40 blur-xl" />
+        <div className="relative -ml-10 -mt-10 h-20 w-20 rounded-full bg-gradient-to-br from-rose-400/30 to-red-500/30 blur-2xl" />
       </motion.div>
       <motion.div
         style={{ x: sx, y: sy }}
-        className="pointer-events-none fixed top-0 left-0 z-[300] hidden md:block mix-blend-difference"
+        className="pointer-events-none fixed top-0 left-0 z-[150] hidden md:block"
       >
-        <div className="relative -ml-1 -mt-1 h-2 w-2 rounded-full bg-white" />
+        <div className="relative -ml-1 -mt-1 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-rose-200/60" />
       </motion.div>
     </>
   );
