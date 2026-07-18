@@ -1,18 +1,22 @@
 import { renderToString } from 'react-dom/server';
-import { createElement as h } from 'react';
+import { createElement as h, type ReactNode } from 'react';
 import { StaticRouter } from 'react-router-dom/server';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, type HelmetServerState } from 'react-helmet-async';
 import Home from './pages/Home';
 import Fullstack from './pages/Fullstack';
 import Ecommerce from './pages/Ecommerce';
 import WebDeveloperKyiv from './pages/WebDeveloperKyiv';
 import BlogReactVite from './pages/BlogReactVite';
 
-function renderRoute(path: string, node: React.ReactNode) {
-  const helmetContext: any = {};
+interface HelmetContext {
+  helmet?: HelmetServerState;
+}
+
+function renderRoute(path: string, node: ReactNode) {
+  const helmetContext: HelmetContext = {};
   const html = renderToString(
-    h(HelmetProvider, { context: helmetContext } as any,
-      h(StaticRouter, { location: path }, node as any)
+    h(HelmetProvider, { context: helmetContext } as never,
+      h(StaticRouter, { location: path }, node as never)
     )
   );
   const { helmet } = helmetContext;

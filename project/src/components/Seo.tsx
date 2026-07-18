@@ -20,6 +20,8 @@ export default function Seo({ title, description, path, ogType = 'website' }: Se
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
+      <meta property="og:image" content="https://krvtsvcorp.pp.ua/og-image.jpg" />
+      <meta name="twitter:image" content="https://krvtsvcorp.pp.ua/og-image.jpg" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
     </Helmet>

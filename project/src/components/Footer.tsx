@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -11,26 +12,26 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row items-center justify-between gap-6"
         >
-          <a href="#" className="text-xl sm:text-2xl font-black tracking-tight text-white whitespace-nowrap">
+          <Link to="/" className="text-xl sm:text-2xl font-black tracking-tight text-white whitespace-nowrap">
             KRVTSV<span className="text-rose-500"> CORP</span>
-          </a>
+          </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
             {[
-              { label: 'Переваги', href: '#advantages' },
-              { label: 'Послуги', href: '#services' },
-              { label: 'Проєкт', href: '#project' },
-              { label: 'Ціни', href: '#prices' },
-              { label: 'Питання', href: '#faq' },
-              { label: 'Контакти', href: '#contact' },
+              { label: 'Переваги', href: '/#advantages' },
+              { label: 'Послуги', href: '/#services' },
+              { label: 'Проєкт', href: '/#project' },
+              { label: 'Ціни', href: '/#prices' },
+              { label: 'Питання', href: '/#faq' },
+              { label: 'Контакти', href: '/#contact' },
             ].map((l) => (
-              <a
+              <Link
                 key={l.href}
-                href={l.href}
+                to={l.href}
                 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-rose-500 transition-colors whitespace-nowrap"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 

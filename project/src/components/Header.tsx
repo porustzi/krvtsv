@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const links = [
-  { label: 'Переваги', href: '#advantages' },
-  { label: 'Послуги', href: '#services' },
-  { label: 'Проєкт', href: '#project' },
-  { label: 'Ціни', href: '#prices' },
-  { label: 'Процес', href: '#process' },
-  { label: 'Питання', href: '#faq' },
-  { label: 'Контакти', href: '#contact' },
+  { label: 'Переваги', href: '/#advantages' },
+  { label: 'Послуги', href: '/#services' },
+  { label: 'Проєкт', href: '/#project' },
+  { label: 'Ціни', href: '/#prices' },
+  { label: 'Процес', href: '/#process' },
+  { label: 'Питання', href: '/#faq' },
+  { label: 'Контакти', href: '/#contact' },
 ];
 
 export default function Header() {
@@ -49,13 +50,13 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
-              href={l.href}
+              to={l.href}
               className="text-[11px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-rose-500 transition-colors whitespace-nowrap"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <a
             href="https://t.me/holdingtokens"
@@ -87,17 +88,20 @@ export default function Header() {
           >
             <div className="flex flex-col gap-8 text-center w-full max-w-xs mx-auto">
               {links.map((l, i) => (
-                <motion.a
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.1 }}
                   key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="text-2xl sm:text-3xl font-black uppercase tracking-tighter text-gray-900 hover:text-rose-500 transition-colors break-words"
                 >
-                  {l.label}
-                </motion.a>
+                  <Link
+                    to={l.href}
+                    onClick={() => setOpen(false)}
+                    className="text-2xl sm:text-3xl font-black uppercase tracking-tighter text-gray-900 hover:text-rose-500 transition-colors break-words"
+                  >
+                    {l.label}
+                  </Link>
+                </motion.div>
               ))}
               <motion.a
                 initial={{ opacity: 0, y: 20 }}

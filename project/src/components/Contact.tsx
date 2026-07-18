@@ -22,7 +22,7 @@ export default function Contact() {
 
     try {
       window.open(tgUrl, '_blank', 'noopener,noreferrer');
-    } catch (err: any) {
+    } catch {
       setError('Не вдалося відкрити Telegram. Напишіть нам вручну: @holdingtokens');
       setLoading(false);
       return;
@@ -107,10 +107,10 @@ export default function Contact() {
               >
                 <CheckCircle size={48} className="text-rose-500 mx-auto mb-4" />
                 <h3 className="text-2xl md:text-2xl font-black uppercase text-gray-900 mb-3 break-words">
-                  Заявку отримано!
+                  Заявку підготовано!
                 </h3>
                 <p className="text-gray-500 text-base sm:text-sm md:text-base break-words">
-                  Зв'яжемось з тобою протягом кількох годин.
+                  Відкрився Telegram з готовим повідомленням — залишилось натиснути «Надіслати». Якщо Telegram не відкрився, напиши нам вручну: <span className="font-bold text-gray-900">@holdingtokens</span>.
                 </p>
               </motion.div>
             ) : (
