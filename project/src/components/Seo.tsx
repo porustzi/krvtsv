@@ -10,7 +10,7 @@ interface SeoProps {
 const SITE = 'https://krvtsvcorp.pp.ua';
 
 export default function Seo({ title, description, path, ogType = 'website' }: SeoProps) {
-  const url = SITE + path;
+  const url = SITE + (path.endsWith('/') ? path : path + '/');
   return (
     <Helmet>
       <title>{title}</title>
