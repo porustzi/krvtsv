@@ -49,8 +49,8 @@ export default function Contact() {
               КОНТАКТИ
             </p>
 
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[6rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8 break-words">
-              ДАВАЙ <span className="text-rose-500">ПОГОВОРИМО</span>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-black uppercase leading-[0.9] tracking-tight text-gray-900 mb-6 md:mb-8">
+              ДАВАЙ <span className="text-rose-500 whitespace-nowrap">ПОГОВОРИМО</span>
             </h2>
 
             <p className="text-gray-500 text-lg sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-md mx-auto lg:mx-0 break-words">
