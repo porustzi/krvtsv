@@ -7,49 +7,49 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://krvtsvcorp.pp.ua/services/fullstack</loc>
+    <loc>https://krvtsvcorp.pp.ua/services/fullstack/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://krvtsvcorp.pp.ua/services/ecommerce</loc>
+    <loc>https://krvtsvcorp.pp.ua/services/ecommerce/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://krvtsvcorp.pp.ua/services/web-developer-kyiv</loc>
+    <loc>https://krvtsvcorp.pp.ua/services/web-developer-kyiv/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://krvtsvcorp.pp.ua/blog/react-vite</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://krvtsvcorp.pp.ua/blog</loc>
+    <loc>https://krvtsvcorp.pp.ua/blog/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://krvtsvcorp.pp.ua/blog/landing-vs-website</loc>
+    <loc>https://krvtsvcorp.pp.ua/blog/react-vite/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://krvtsvcorp.pp.ua/blog/no-leads-from-site</loc>
+    <loc>https://krvtsvcorp.pp.ua/blog/landing-vs-website/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://krvtsvcorp.pp.ua/blog/site-from-scratch-checklist</loc>
+    <loc>https://krvtsvcorp.pp.ua/blog/no-leads-from-site/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://krvtsvcorp.pp.ua/blog/site-from-scratch-checklist/</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
