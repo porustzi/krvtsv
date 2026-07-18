@@ -4,7 +4,6 @@ import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 
 const Advantages = lazy(() => import('../components/Advantages'));
-const Services = lazy(() => import('../components/Services'));
 const TopProject = lazy(() => import('../components/TopProject'));
 const Prices = lazy(() => import('../components/Prices'));
 const Process = lazy(() => import('../components/Process'));
@@ -19,7 +18,6 @@ export default function Home() {
         <Hero />
         <Suspense fallback={null}>
           <Advantages />
-          <Services />
           <TopProject />
           <Prices />
           <Process />

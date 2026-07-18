@@ -6,7 +6,7 @@ import { ScrollProgress } from '../lib/anim';
 
 const links = [
   { label: 'Переваги', href: '/#advantages' },
-  { label: 'Послуги', href: '/#services' },
+  { label: 'Проєкт', href: '/#project' },
   { label: 'Проєкт', href: '/#project' },
   { label: 'Блог', href: '/blog' },
   { label: 'Ціни', href: '/#prices' },
