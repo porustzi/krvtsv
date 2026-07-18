@@ -23,22 +23,22 @@ export default function BlogReactVite() {
             Якщо ви обираєте стек для нового сайту, React разом із Vite дає оптимальне поєднання швидкості розробки, продуктивності та SEO. Розбираємо детально.
           </p>
 
-          <h2 className="text-2xl font-black uppercase text-gray-900 mt-10 mb-4">1. Швидкість завантаження</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">1. Швидкість завантаження</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             Vite використовує нативні ES-модулі та миттєвий HMR. Збірка виробничого бандла швидша за Webpack у кілька разів, а розмір — менший. Це прямо впливає на LCP і ранжування в Google.
           </p>
 
-          <h2 className="text-2xl font-black uppercase text-gray-900 mt-10 mb-4">2. SEO友好сть</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">2. SEO-дружність</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             Сайти на React можна пререндерити (SSG) — тоді пошуковий робот бачить готовий HTML одразу. Ми саме так і робимо: контент потрапляє в індекс без очікування JS.
           </p>
 
-          <h2 className="text-2xl font-black uppercase text-gray-900 mt-10 mb-4">3. Порівняння з WordPress</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">3. Порівняння з WordPress</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             WordPress простіший для контенту, але повільніший і важчий в обслуговуванні. React/Vite — для сучасних швидких сайтів, лендінгів та SaaS, де важлива продуктивність.
           </p>
 
-          <h2 className="text-2xl font-black uppercase text-gray-900 mt-10 mb-4">4. Коли обрати фуллстак</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">4. Коли обрати фуллстак</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
             Якщо потрібен не тільки фронт, а й бекенд з базою даних — дивіться нашу сторінку <Link to="/services/fullstack" className="text-rose-500 font-bold hover:underline">фуллстак розробки</Link>. Для магазину — <Link to="/services/ecommerce" className="text-rose-500 font-bold hover:underline">розробку e-commerce</Link>.
           </p>

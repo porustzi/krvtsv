@@ -21,6 +21,7 @@ export default function Footer() {
               { label: 'Переваги', href: '/#advantages' },
               { label: 'Послуги', href: '/#services' },
               { label: 'Проєкт', href: '/#project' },
+              { label: 'Блог', href: '/blog' },
               { label: 'Ціни', href: '/#prices' },
               { label: 'Питання', href: '/#faq' },
               { label: 'Контакти', href: '/#contact' },

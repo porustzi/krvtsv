@@ -8,6 +8,7 @@ const links = [
   { label: 'Переваги', href: '/#advantages' },
   { label: 'Послуги', href: '/#services' },
   { label: 'Проєкт', href: '/#project' },
+  { label: 'Блог', href: '/blog' },
   { label: 'Ціни', href: '/#prices' },
   { label: 'Процес', href: '/#process' },
   { label: 'Питання', href: '/#faq' },

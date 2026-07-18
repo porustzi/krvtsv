@@ -7,6 +7,10 @@ import Fullstack from './pages/Fullstack';
 import Ecommerce from './pages/Ecommerce';
 import WebDeveloperKyiv from './pages/WebDeveloperKyiv';
 import BlogReactVite from './pages/BlogReactVite';
+import BlogIndex from './pages/BlogIndex';
+import BlogLandingVsWebsite from './pages/BlogLandingVsWebsite';
+import BlogNoLeads from './pages/BlogNoLeads';
+import BlogSiteFromScratch from './pages/BlogSiteFromScratch';
 
 interface HelmetContext {
   helmet?: HelmetServerState;
@@ -33,5 +37,9 @@ export function render() {
     '/services/ecommerce': renderRoute('/services/ecommerce', h(Ecommerce)),
     '/services/web-developer-kyiv': renderRoute('/services/web-developer-kyiv', h(WebDeveloperKyiv)),
     '/blog/react-vite': renderRoute('/blog/react-vite', h(BlogReactVite)),
+    '/blog': renderRoute('/blog', h(BlogIndex)),
+    '/blog/landing-vs-website': renderRoute('/blog/landing-vs-website', h(BlogLandingVsWebsite)),
+    '/blog/no-leads-from-site': renderRoute('/blog/no-leads-from-site', h(BlogNoLeads)),
+    '/blog/site-from-scratch-checklist': renderRoute('/blog/site-from-scratch-checklist', h(BlogSiteFromScratch)),
   };
 }
