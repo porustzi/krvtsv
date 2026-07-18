@@ -1,31 +1,31 @@
-import { renderToStaticMarkup } from 'react-dom/server';
-import { createElement as h, Fragment } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Advantages from './components/Advantages';
-import Services from './components/Services';
-import TopProject from './components/TopProject';
-import Prices from './components/Prices';
-import Process from './components/Process';
-import Faq from './components/Faq';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { renderToString } from 'react-dom/server';
+import { createElement as h } from 'react';
+import { StaticRouter } from 'react-router-dom/server';
+import { HelmetProvider } from 'react-helmet-async';
+import Home from './pages/Home';
+import Fullstack from './pages/Fullstack';
+import Ecommerce from './pages/Ecommerce';
+import BlogReactVite from './pages/BlogReactVite';
+
+function renderRoute(path: string, node: React.ReactNode) {
+  const helmetContext: any = {};
+  const html = renderToString(
+    h(HelmetProvider, { context: helmetContext } as any,
+      h(StaticRouter, { location: path }, node as any)
+    )
+  );
+  const { helmet } = helmetContext;
+  const head = helmet
+    ? `${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}`
+    : '';
+  return { html, head };
+}
 
 export function render() {
-  return renderToStaticMarkup(
-    h(Fragment, null, [
-      h(Header, { key: 'hdr' }),
-      h('main', { key: 'main' }, [
-        h(Hero, { key: 'hero' }),
-        h(Advantages, { key: 'adv' }),
-        h(Services, { key: 'svc' }),
-        h(TopProject, { key: 'top' }),
-        h(Prices, { key: 'prc' }),
-        h(Process, { key: 'proc' }),
-        h(Faq, { key: 'faq' }),
-        h(Contact, { key: 'ctc' }),
-      ]),
-      h(Footer, { key: 'ftr' }),
-    ])
-  );
+  return {
+    '/': renderRoute('/', h(Home)),
+    '/services/fullstack': renderRoute('/services/fullstack', h(Fullstack)),
+    '/services/ecommerce': renderRoute('/services/ecommerce', h(Ecommerce)),
+    '/blog/react-vite': renderRoute('/blog/react-vite', h(BlogReactVite)),
+  };
 }

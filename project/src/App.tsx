@@ -1,35 +1,22 @@
-import { lazy, Suspense } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import Home from './pages/Home';
+import Fullstack from './pages/Fullstack';
+import Ecommerce from './pages/Ecommerce';
+import BlogReactVite from './pages/BlogReactVite';
 
-const Advantages = lazy(() => import('./components/Advantages'));
-const Services = lazy(() => import('./components/Services'));
-const TopProject = lazy(() => import('./components/TopProject'));
-const Prices = lazy(() => import('./components/Prices'));
-const Process = lazy(() => import('./components/Process'));
-const Faq = lazy(() => import('./components/Faq'));
-const Contact = lazy(() => import('./components/Contact'));
-
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
-      <Header />
-      <main>
-        <Hero />
-        <Suspense fallback={null}>
-          <Advantages />
-          <Services />
-          <TopProject />
-          <Prices />
-          <Process />
-          <Faq />
-          <Contact />
-        </Suspense>
-      </main>
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services/fullstack" element={<Fullstack />} />
+          <Route path="/services/ecommerce" element={<Ecommerce />} />
+          <Route path="/blog/react-vite" element={<BlogReactVite />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
-
-export default App;

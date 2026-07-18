@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Globe, Smartphone, ShoppingCart, Paintbrush, Search, Zap, Code2, Server } from 'lucide-react';
 
 const services = [
@@ -16,11 +17,13 @@ const services = [
     icon: ShoppingCart,
     title: 'Розробка e-commerce сайтів',
     desc: 'Фуллстак веб-розробник збере інтернет-магазин з кошиком, оплатою (WayForPay/LiqPay/Stripe), фільтрами та адмінкою. Запускайте продажі онлайн швидко і без болю.',
+    href: '/services/ecommerce',
   },
   {
     icon: Code2,
     title: 'Фуллстак розробка Україна',
     desc: 'Frontend (React/Vite) + backend (Node.js/API/БД) під ключ. Замовити фуллстак проєкт можна дистанційно — від MVP до масштабованого продукту.',
+    href: '/services/fullstack',
   },
   {
     icon: Server,
@@ -68,15 +71,14 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((item, i) => {
             const Icon = item.icon;
-            return (
+            const card = (
               <motion.div
-                key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="group relative bg-white border-2 border-gray-100 rounded-3xl p-6 md:p-8 hover:border-rose-200 transition-all duration-300"
+                className="group relative bg-white border-2 border-gray-100 rounded-3xl p-6 md:p-8 hover:border-rose-200 transition-all duration-300 h-full"
               >
                 <div className="flex items-start gap-4 mb-5">
                   <div className="bg-rose-500 w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-rose-500/10">
@@ -89,7 +91,17 @@ export default function Services() {
                 <p className="text-base sm:text-sm text-gray-500 leading-relaxed break-words">
                   {item.desc}
                 </p>
+                {item.href && (
+                  <span className="inline-block mt-4 text-rose-500 font-black text-sm uppercase tracking-widest group-hover:underline">
+                    Детальніше →
+                  </span>
+                )}
               </motion.div>
+            );
+            return item.href ? (
+              <Link key={item.title} to={item.href} className="block">{card}</Link>
+            ) : (
+              <div key={item.title}>{card}</div>
             );
           })}
         </div>
