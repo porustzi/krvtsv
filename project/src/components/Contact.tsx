@@ -152,6 +152,10 @@ export default function Contact() {
                   <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="text-rose-500 font-bold hover:underline whitespace-nowrap">
                     Telegram
                   </a>
+                  {' '}·{' '}
+                  <a href="tel:+380935990741" className="text-rose-500 font-bold hover:underline whitespace-nowrap">
+                    +380 93 599 0741
+                  </a>
                 </p>
               </form>
             )}
