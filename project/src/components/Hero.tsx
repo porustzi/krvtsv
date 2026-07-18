@@ -2,8 +2,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Send } from 'lucide-react';
 import { Magnetic, Parallax } from '../lib/anim';
 
-const slogan = ['С', 'А', 'Й', 'Т', 'И', ',', ' ', 'Я', 'К', 'І', ' '];
-
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-white pt-28 pb-16">
@@ -34,22 +32,9 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-4 break-words hero-rise" style={{ animationDelay: '80ms' }}>
-              <span className="flex flex-wrap">
-                {slogan.map((ch, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0, y: 30, rotateX: -90 }}
-                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                    transition={{ delay: 0.15 + i * 0.03, duration: 0.5, ease: 'backOut' }}
-                    style={{ display: 'inline-block', whiteSpace: 'pre' }}
-                  >
-                    {ch}
-                  </motion.span>
-                ))}
-              </span>
-              <br />
-              <span className="text-rose-500"> ПРОДАЮТЬ</span>
+            <h1 className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.95] tracking-tight text-gray-900 uppercase mb-4 break-words hero-rise" style={{ animationDelay: '80ms' }}>
+              САЙТИ, ЯКІ<br />
+              <span className="text-rose-500">ПРОДАЮТЬ</span>
             </h1>
 
             <div className="mt-6 mb-4 hero-rise" style={{ animationDelay: '160ms' }}>

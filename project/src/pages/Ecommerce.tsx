@@ -18,7 +18,7 @@ export default function Ecommerce() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">E-commerce</p>
             <h1 className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-6 break-words">
-              РОЗРОБКА<br /><span className="text-rose-500">E-COMMERCE САЙТІВ</span>
+              РОЗРОБКА<br />{' '}<span className="text-rose-500">E-COMMERCE САЙТІВ</span>
             </h1>
             <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-2xl mb-8 break-words">
               Запускаємо інтернет-магазини, які продають: швидкий каталог, зручний кошик, надійні платежі та інтеграція з доставкою. Від MVP до масштабованого магазину.

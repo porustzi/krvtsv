@@ -18,7 +18,7 @@ export default function WebDeveloperKyiv() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Веб-розробник Київ</p>
             <h1 className="text-[clamp(2.2rem,8vw,5rem)] font-black leading-[0.95] tracking-tight text-gray-900 uppercase mb-6 break-words">
-              ВЕБ-РОЗРОБНИК<br /><span className="text-rose-500">У КИЄВІ</span>
+              ВЕБ-РОЗРОБНИК<br />{' '}<span className="text-rose-500">У КИЄВІ</span>
             </h1>
             <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-2xl mb-8 break-words">
               Шукаєте веб-розробника чи веб-студію в Києві? KRVTSV CORP створює сайти, які продають: від лендінгу до фуллстак-продукту. Працюємо з клієнтами по всій Україні — онлайн, без зайвих зустрічей.

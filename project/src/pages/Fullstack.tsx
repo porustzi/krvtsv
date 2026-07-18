@@ -18,7 +18,7 @@ export default function Fullstack() {
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
             <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Фуллстак розробка</p>
             <h1 className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-6 break-words">
-              ФУЛЛСТАК<br /><span className="text-rose-500">РОЗРОБКА В УКРАЇНІ</span>
+              ФУЛЛСТАК<br />{' '}<span className="text-rose-500">РОЗРОБКА В УКРАЇНІ</span>
             </h1>
             <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-2xl mb-8 break-words">
               Потрібен продукт «під ключ»? KRVTSV CORP бере весь цикл розробки: фронтенд на React/Vite, бекенд на Node.js, бази даних, інтеграції та деплой. Один виконавець — менше комунікації і швидший запуск.

@@ -38,8 +38,7 @@ export default function Process() {
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Як ми працюємо</p>
           <h2 className="text-[clamp(2.5rem,9vw,5rem)] font-black uppercase leading-tight text-white break-words">
-            ПРОЦЕС<br />
-            <span className="text-rose-500">БЕЗ МАГІЇ</span>
+            ПРОЦЕС<br />{' '}<span className="text-rose-500">БЕЗ МАГІЇ</span>
           </h2>
           <p className="text-gray-500 mt-4 text-base sm:text-sm md:text-lg max-w-lg break-words">
             4 прості кроки від першого повідомлення до живого сайту.

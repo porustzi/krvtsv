@@ -44,8 +44,7 @@ export default function Advantages() {
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Чому ми</p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] text-gray-900 break-words">
-            П'ять причин<br />
-            <span className="text-rose-500">обрати нас</span>
+            П'ять причин<br />{' '}<span className="text-rose-500">обрати нас</span>
           </h2>
         </motion.div>
 

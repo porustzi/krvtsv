@@ -64,8 +64,7 @@ export default function Faq() {
         >
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">FAQ</p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.9] text-gray-900 break-words">
-            Питання<br />
-            <span className="text-rose-500">та відповіді</span>
+            Питання<br />{' '}<span className="text-rose-500">та відповіді</span>
           </h2>
         </motion.div>
 

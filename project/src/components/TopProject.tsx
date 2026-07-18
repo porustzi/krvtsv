@@ -187,8 +187,7 @@ export default function TopProject() {
         >
           <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Реальні кейси</p>
           <h2 className="text-[clamp(2rem,7vw,5rem)] font-black uppercase leading-tight text-gray-900 break-words">
-            НАШІ<br />
-            <span className="text-rose-500">ПРОЄКТИ</span>
+            НАШІ<br />{' '}<span className="text-rose-500">ПРОЄКТИ</span>
           </h2>
           <p className="text-gray-500 mt-4 text-base sm:text-sm md:text-lg max-w-xl break-words">
             Три живі проєкти, які ми запустили. Реальні терміни, ціни та результати.
