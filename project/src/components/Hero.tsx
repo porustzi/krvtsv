@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Send } from 'lucide-react';
+import { Magnetic, AnimatedGradientText } from '../lib/anim';
+
+const slogan = ['С', 'А', 'Й', 'Т', 'И', ',', ' ', 'Я', 'К', 'І', ' ', 'П', 'Р', 'О', 'Д', 'А', 'Ю', 'Т', 'Ь'];
 
 export default function Hero() {
   return (
@@ -28,8 +31,21 @@ export default function Hero() {
             </div>
 
             <h1 className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-4 break-words hero-rise" style={{ animationDelay: '80ms' }}>
-              САЙТИ, ЯКІ<br />
-              <span className="bg-gradient-to-r from-rose-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">ПРОДАЮТЬ</span>
+              <span className="flex flex-wrap">
+                {slogan.map((ch, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 30, rotateX: -90 }}
+                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                    transition={{ delay: 0.15 + i * 0.03, duration: 0.5, ease: 'backOut' }}
+                    style={{ display: 'inline-block', whiteSpace: 'pre' }}
+                  >
+                    {ch}
+                  </motion.span>
+                ))}
+              </span>
+              <br />
+              <AnimatedGradientText>ПРОДАЮТЬ</AnimatedGradientText>
             </h1>
 
             <div className="mt-6 mb-4 hero-rise" style={{ animationDelay: '160ms' }}>
@@ -46,22 +62,26 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-3 sm:gap-4 hero-rise" style={{ animationDelay: '320ms' }}>
-              <a
-                href="#project"
-                className="group inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs px-8 sm:px-8 py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-colors duration-300 whitespace-nowrap shadow-lg shadow-rose-500/20"
-              >
-                ТОП ПРОЄКТ
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform flex-shrink-0" />
-              </a>
-              <a
-                href="https://t.me/holdingtokens"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 font-black uppercase tracking-widest text-sm sm:text-xs px-8 sm:px-8 py-5 sm:py-4 rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-300 whitespace-nowrap"
-              >
-                <Send size={18} className="flex-shrink-0" />
-                Telegram
-              </a>
+              <Magnetic strength={0.4}>
+                <a
+                  href="#project"
+                  className="group inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs px-8 sm:px-8 py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-colors duration-300 whitespace-nowrap shadow-lg shadow-rose-500/20"
+                >
+                  ТОП ПРОЄКТ
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                </a>
+              </Magnetic>
+              <Magnetic strength={0.4}>
+                <a
+                  href="https://t.me/holdingtokens"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 font-black uppercase tracking-widest text-sm sm:text-xs px-8 sm:px-8 py-5 sm:py-4 rounded-full hover:bg-gray-900 hover:text-white transition-colors duration-300 whitespace-nowrap"
+                >
+                  <Send size={18} className="flex-shrink-0" />
+                  Telegram
+                </a>
+              </Magnetic>
             </div>
 
             <div className="mt-10 sm:mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 hero-rise" style={{ animationDelay: '400ms' }}>
@@ -105,7 +125,8 @@ export default function Hero() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-                      className="flex items-center gap-4 bg-white rounded-2xl px-6 py-4 shadow-sm"
+                      whileHover={{ scale: 1.03, x: 6 }}
+                      className="flex items-center gap-4 bg-white rounded-2xl px-6 py-4 shadow-sm cursor-default"
                     >
                       <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${item.tint} flex items-center justify-center`}>
                         <span className="w-3 h-3 rounded-full bg-white/90" />

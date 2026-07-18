@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, CheckCircle2 } from 'lucide-react';
+import { Tilt } from '../lib/anim';
 
 type Case = {
   name: string;
@@ -194,9 +195,11 @@ export default function TopProject() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch [perspective:1200px]">
           {cases.map((item, i) => (
-            <CaseCard key={item.name} item={item} i={i} />
+            <Tilt key={item.name} className="h-full" max={6}>
+              <CaseCard item={item} i={i} />
+            </Tilt>
           ))}
         </div>
       </div>

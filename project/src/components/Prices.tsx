@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { Spotlight } from '../lib/anim';
 
 const plans = [
   {
@@ -51,18 +52,23 @@ export default function Prices() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
           {plans.map((plan, i) => (
-            <motion.div
+            <Spotlight
               key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 border-2 ${
-                plan.highlighted
-                  ? 'bg-gray-900 text-white border-gray-900 shadow-xl shadow-rose-500/10 scale-[1.02] md:scale-105 z-10'
-                  : 'bg-white border-gray-100 hover:border-rose-200'
-              }`}
+              className="rounded-3xl"
+              from={plan.highlighted ? 'rgba(244,63,94,0.25)' : 'rgba(244,63,94,0.10)'}
+              to="rgba(139,92,246,0.08)"
             >
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={`relative rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 border-2 h-full ${
+                  plan.highlighted
+                    ? 'bg-gray-900 text-white border-gray-900 shadow-xl shadow-rose-500/10 scale-[1.02] md:scale-105 z-10'
+                    : 'bg-white border-gray-100 hover:border-rose-200'
+                }`}
+              >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-rose-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full whitespace-nowrap shadow-lg">
@@ -110,7 +116,8 @@ export default function Prices() {
               >
                 Замовити
               </a>
-            </motion.div>
+              </motion.div>
+            </Spotlight>
           ))}
         </div>
 

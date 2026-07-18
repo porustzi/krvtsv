@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { DollarSign, Zap, MessageCircle, Palette, Smartphone } from 'lucide-react';
+import { Spotlight, Magnetic } from '../lib/anim';
 
 const items = [
   {
@@ -52,32 +53,32 @@ export default function Advantages() {
           {items.map((item, i) => {
             const Icon = item.icon;
             return (
-              <motion.div
-                key={item.number}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ y: -6 }}
-                className={`group relative bg-white border-2 border-gray-100 rounded-3xl p-6 md:p-8 hover:border-rose-200 transition-all duration-300 ${
-                  i === 4 ? 'md:col-span-2 lg:col-span-1' : ''
-                }`}
-              >
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`${item.accent} w-12 h-12 md:w-12 md:h-12 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-rose-500/10`}>
-                    <Icon size={24} className="text-white" />
+              <Spotlight key={item.number} className={`rounded-3xl ${i === 4 ? 'md:col-span-2 lg:col-span-1' : ''}`}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="group relative bg-white border-2 border-gray-100 rounded-3xl p-6 md:p-8 hover:border-rose-200 transition-all duration-300 h-full"
+                >
+                  <div className="flex items-start justify-between mb-6">
+                    <Magnetic strength={0.3}>
+                      <div className={`${item.accent} w-12 h-12 md:w-12 md:h-12 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-rose-500/10 group-hover:scale-110 transition-transform`}>
+                        <Icon size={24} className="text-white" />
+                      </div>
+                    </Magnetic>
+                    <span className="text-5xl md:text-5xl font-black text-gray-100 group-hover:text-rose-100 transition-colors leading-none">
+                      {item.number}
+                    </span>
                   </div>
-                  <span className="text-5xl md:text-5xl font-black text-gray-100 group-hover:text-rose-100 transition-colors leading-none">
-                    {item.number}
-                  </span>
-                </div>
-                <h3 className="text-xl md:text-xl font-black uppercase tracking-wide text-gray-900 mb-3 break-words">
-                  {item.title}
-                </h3>
-                <p className="text-base sm:text-sm text-gray-500 leading-relaxed break-words">
-                  {item.desc}
-                </p>
-              </motion.div>
+                  <h3 className="text-xl md:text-xl font-black uppercase tracking-wide text-gray-900 mb-3 break-words">
+                    {item.title}
+                  </h3>
+                  <p className="text-base sm:text-sm text-gray-500 leading-relaxed break-words">
+                    {item.desc}
+                  </p>
+                </motion.div>
+              </Spotlight>
             );
           })}
         </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, CheckCircle } from 'lucide-react';
+import { Magnetic } from '../lib/anim';
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -145,10 +146,12 @@ export default function Contact() {
                   <p className="text-rose-500 text-sm font-bold text-center">{error}</p>
                 )}
 
-                <button type="submit" disabled={loading}
-                  className="w-full bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs md:text-sm py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-all duration-300 disabled:opacity-60 shadow-lg hover:shadow-rose-500/20 active:scale-95">
-                  {loading ? 'Відправляємо...' : 'Відправити заявку'}
-                </button>
+                <Magnetic strength={0.25} className="w-full">
+                  <button type="submit" disabled={loading}
+                    className="w-full bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs md:text-sm py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-all duration-300 disabled:opacity-60 shadow-lg hover:shadow-rose-500/20 active:scale-95">
+                    {loading ? 'Відправляємо...' : 'Відправити заявку'}
+                  </button>
+                </Magnetic>
 
                 <p className="text-center text-xs text-gray-500 font-medium uppercase tracking-tighter break-words">
                   Або одразу в{' '}
