@@ -31,8 +31,9 @@ const items = [
 
 export default function Advantages() {
   return (
-    <section id="advantages" className="py-20 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section id="advantages" className="relative py-20 md:py-32 bg-white overflow-hidden">
+      <div className="absolute top-1/3 right-0 w-80 h-80 bg-rose-100/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +44,7 @@ export default function Advantages() {
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Чому ми</p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] text-gray-900 break-words">
             П'ять причин<br />
-            <span className="text-rose-500">обрати нас</span>
+            <span className="bg-gradient-to-r from-rose-500 to-violet-500 bg-clip-text text-transparent">обрати нас</span>
           </h2>
         </motion.div>
 

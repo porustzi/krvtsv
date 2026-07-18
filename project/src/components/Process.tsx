@@ -38,7 +38,7 @@ export default function Process() {
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Як ми працюємо</p>
           <h2 className="text-[clamp(2.5rem,9vw,5rem)] font-black uppercase leading-tight text-white break-words">
             ПРОЦЕС<br />
-            <span className="text-rose-500">БЕЗ МАГІЇ</span>
+            <span className="bg-gradient-to-r from-rose-400 to-violet-400 bg-clip-text text-transparent">БЕЗ МАГІЇ</span>
           </h2>
           <p className="text-gray-500 mt-4 text-base sm:text-sm md:text-lg max-w-lg break-words">
             4 прості кроки від першого повідомлення до живого сайту.
@@ -57,7 +57,7 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.12 }}
-                className="relative z-10 bg-gray-800 rounded-3xl p-6 sm:p-8 hover:bg-gray-750 transition-colors group"
+                className="relative z-10 bg-gradient-to-b from-gray-800 to-gray-900 rounded-3xl p-6 sm:p-8 hover:from-gray-750 transition-all group border border-gray-700"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 sm:w-12 sm:h-12 bg-rose-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
