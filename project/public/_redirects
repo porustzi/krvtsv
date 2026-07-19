@@ -11,5 +11,6 @@ https://krvtsv.pages.dev/* https://krvtsvcorp.pp.ua/:splat 301
 /blog/site-from-scratch-checklist https://krvtsvcorp.pp.ua/blog/site-from-scratch-checklist/ 301
 
 /llms.txt /llms.txt 200
+/sitemap.xml /sitemap.xml 200
 
 /* /index.html 200
