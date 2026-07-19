@@ -1,0 +1,24 @@
+# KRVTSV CORP — Веб-студія у Києві
+## Створюємо сайти, які продають: лендінги, бізнес-сайти, інтернет-магазини на React/Vite.
+
+> Українська веб-студія. Прямий контакт з розробником. Жодних шаблонів — тільки унікальні рішення під ваш бізнес. Запуск від 3 днів.
+
+## Основні сторінки
+
+- [Головна](https://krvtsvcorp.pp.ua/) — Послуги веб-студії: лендінги, бізнес-сайти, e-commerce, редизайн. Портфоліо, ціни, FAQ.
+- [Фуллстак розробка](https://krvtsvcorp.pp.ua/services/fullstack) — Розробка full-stack додатків на React + Node.js + TypeScript. API, адмінки, бази даних.
+- [E-commerce](https://krvtsvcorp.pp.ua/services/ecommerce) — Розробка інтернет-магазинів: каталог, кошик, оплата, адмінка.
+- [Веб-розробник Київ](https://krvtsvcorp.pp.ua/services/web-developer-kyiv) — Послуги веб-розробника в Києві та Україні.
+
+## Блог
+
+- [Лендінг чи сайт: що обрати для бізнесу](https://krvtsvcorp.pp.ua/blog/landing-vs-website) — Порівняння лендінгу та багатосторінкового сайту.
+- [Чому сайт не приносить заявки](https://krvtsvcorp.pp.ua/blog/no-leads-from-site) — Типові помилки та способи виправити.
+- [Як створити сайт з нуля](https://krvtsvcorp.pp.ua/blog/site-from-scratch-checklist) — Покрокова інструкція створення сайту.
+- [React + Vite: ідеальний стек](https://krvtsvcorp.pp.ua/blog/react-vite) — Чому React + Vite — оптимальний вибір для сучасного сайту.
+
+## Контакти
+
+- Email: krvtsvcorp@gmail.com
+- Telegram: https://t.me/holdingtokens
+- Телефон: +380935990741
