@@ -16,7 +16,7 @@ export default function Ecommerce() {
       <main>
         <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">E-commerce</p>
+            <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">E-commerce</p>
             <h1 className="text-[clamp(2.5rem,9vw,5.5rem)] font-black leading-[0.9] tracking-tight text-gray-900 uppercase mb-6 break-words">
               РОЗРОБКА<br />{' '}<span className="text-rose-500">E-COMMERCE САЙТІВ</span>
             </h1>

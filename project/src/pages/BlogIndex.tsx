@@ -50,7 +50,7 @@ export default function BlogIndex() {
       <Header />
       <main>
         <section className="pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-4 sm:px-8">
-          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Блог</p>
+          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">Блог</p>
           <h1 className="text-4xl md:text-6xl font-black leading-tight text-gray-900 mb-4 break-words">
             Блог веб-<span className="text-rose-500">розробника</span>
           </h1>
@@ -66,7 +66,7 @@ export default function BlogIndex() {
                 className="group block bg-white border-2 border-gray-100 hover:border-rose-200 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:shadow-rose-500/10"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-rose-500 bg-rose-100 px-3 py-1 rounded-full">{p.tag}</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-rose-700 bg-rose-100 px-3 py-1 rounded-full">{p.tag}</span>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{p.date}</span>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-auto">{p.read}</span>
                 </div>

@@ -62,7 +62,7 @@ export default function Faq() {
           transition={{ duration: 0.6 }}
           className="mb-12 md:mb-16 text-center"
         >
-          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">FAQ</p>
+          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">FAQ</p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.9] text-gray-900 break-words">
             Питання<br />{' '}<span className="text-rose-500">та відповіді</span>
           </h2>

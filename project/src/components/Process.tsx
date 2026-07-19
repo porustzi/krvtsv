@@ -36,7 +36,7 @@ export default function Process() {
           transition={{ duration: 0.6 }}
           className="mb-12 sm:mb-20"
         >
-          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Як ми працюємо</p>
+          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">Як ми працюємо</p>
           <h2 className="text-[clamp(2.5rem,9vw,5rem)] font-black uppercase leading-tight text-white break-words">
             ПРОЦЕС<br />{' '}<span className="text-rose-500">БЕЗ МАГІЇ</span>
           </h2>

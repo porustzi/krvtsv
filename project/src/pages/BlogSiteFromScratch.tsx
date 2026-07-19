@@ -15,7 +15,7 @@ export default function BlogSiteFromScratch() {
       <Header />
       <main>
         <article className="pt-32 pb-16 md:pt-40 md:pb-24 max-w-3xl mx-auto px-4 sm:px-8">
-          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Інструкція · 22 квітня 2026</p>
+          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">Інструкція · 22 квітня 2026</p>
           <h1 className="text-4xl md:text-5xl font-black leading-tight text-gray-900 mb-6 break-words">
             Сайт для бізнесу з нуля: покроковий план
           </h1>

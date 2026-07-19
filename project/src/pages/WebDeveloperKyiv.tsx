@@ -16,7 +16,7 @@ export default function WebDeveloperKyiv() {
       <main>
         <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-8">
-            <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Веб-розробник Київ</p>
+            <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">Веб-розробник Київ</p>
             <h1 className="text-[clamp(2.2rem,8vw,5rem)] font-black leading-[0.95] tracking-tight text-gray-900 uppercase mb-6 break-words">
               ВЕБ-РОЗРОБНИК<br />{' '}<span className="text-rose-500">У КИЄВІ</span>
             </h1>

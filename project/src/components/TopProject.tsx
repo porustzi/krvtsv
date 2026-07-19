@@ -130,7 +130,7 @@ function CaseCard({ item, i }: { item: Case; i: number }) {
 
       <div className="p-6 sm:p-7 flex flex-col flex-1">
         <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="text-[10px] sm:text-xs font-black uppercase text-rose-500 bg-rose-100 px-3 py-1 rounded-full whitespace-nowrap">{item.category}</span>
+          <span className="text-[10px] sm:text-xs font-black uppercase text-rose-700 bg-rose-100 px-3 py-1 rounded-full whitespace-nowrap">{item.category}</span>
           <span className="text-[10px] sm:text-xs font-black uppercase text-gray-500 bg-gray-100 px-3 py-1 rounded-full whitespace-nowrap">{item.year}</span>
         </div>
 
@@ -190,7 +190,7 @@ export default function TopProject() {
           transition={{ duration: 0.6 }}
           className="mb-12 sm:mb-16"
         >
-          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Портфоліо</p>
+          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-600 mb-4">Портфоліо</p>
           <h2 className="text-[clamp(2rem,7vw,5rem)] font-black uppercase leading-tight text-gray-900 break-words">
             НАШІ<br />{' '}<span className="text-rose-500">ПРОЄКТИ</span>
           </h2>

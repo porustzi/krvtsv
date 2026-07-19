@@ -45,7 +45,7 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="text-center lg:text-left max-w-[540px] w-full"
           >
-            <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">
+            <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">
               КОНТАКТИ
             </p>
 

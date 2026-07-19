@@ -40,7 +40,7 @@ export default function Prices() {
           transition={{ duration: 0.6 }}
           className="mb-12 md:mb-20 text-center lg:text-left"
         >
-          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вартість</p>
+          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 mb-4">Вартість</p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] text-gray-900 break-words">
             Прозорі<br />{' '}<span className="text-rose-500">ціни</span>
           </h2>
@@ -78,7 +78,7 @@ export default function Prices() {
               )}
 
               <div className="mb-6">
-                <p className={`text-xs sm:text-[10px] font-black uppercase tracking-[0.25em] mb-2 ${plan.highlighted ? 'text-rose-600' : 'text-rose-500'}`}>
+                <p className={`text-xs sm:text-[10px] font-black uppercase tracking-[0.25em] mb-2 ${plan.highlighted ? 'text-rose-600' : 'text-rose-600'}`}>
                   {plan.duration}
                 </p>
                 <h3 className={`text-2xl md:text-2xl font-black uppercase tracking-wide mb-3 break-words ${plan.highlighted ? 'text-white' : 'text-gray-900'}`}>

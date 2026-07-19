@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="min-w-0">
             <div className="mb-4 hero-rise" style={{ animationDelay: '0ms' }}>
-              <span className="inline-block text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 bg-white/70 backdrop-blur border border-rose-100 px-4 sm:px-4 py-3 sm:py-2 rounded-full shadow-sm">
+              <span className="inline-block text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-600 bg-white/70 backdrop-blur border border-rose-100 px-4 sm:px-4 py-3 sm:py-2 rounded-full shadow-sm">
                 Веб-студія в Києві / Ukraine
               </span>
             </div>
