@@ -100,22 +100,26 @@ function CaseCard({ item, i }: { item: Case; i: number }) {
           </div>
         </div>
         <div className="relative overflow-hidden" style={{ aspectRatio: '16/10' }}>
-          <img
-            ref={imgRef}
-            src={item.img}
-            alt={`${item.name} — ${item.type}`}
-            width={800}
-            height={500}
-            loading={i === 0 ? 'eager' : 'lazy'}
-            fetchPriority={i === 0 ? 'high' : 'auto'}
-            decoding="async"
-            className="w-full h-full object-cover"
-            onError={() => {
-              if (imgRef.current && !imgRef.current.src.startsWith('data:')) {
-                imgRef.current.src = FALLBACK(item.name);
-              }
-            }}
-          />
+          <picture>
+            <source srcSet={item.img.replace(/\.(jpe?g|png)$/, '.avif')} type="image/avif" />
+            <source srcSet={item.img.replace(/\.(jpe?g|png)$/, '.webp')} type="image/webp" />
+            <img
+              ref={imgRef}
+              src={item.img}
+              alt={`${item.name} — ${item.type}`}
+              width={800}
+              height={500}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              fetchPriority={i === 0 ? 'high' : 'auto'}
+              decoding="async"
+              className="w-full h-full object-cover"
+              onError={() => {
+                if (imgRef.current && !imgRef.current.src.startsWith('data:')) {
+                  imgRef.current.src = FALLBACK(item.name);
+                }
+              }}
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
           <div className="absolute bottom-4 left-5 right-5">
             <p className="text-white font-black text-xl sm:text-2xl uppercase break-words">{item.name}</p>
