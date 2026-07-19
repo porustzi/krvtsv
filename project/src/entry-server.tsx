@@ -4,6 +4,7 @@ import { StaticRouter } from 'react-router-dom/server';
 import { HelmetProvider, type HelmetServerState } from 'react-helmet-async';
 import Home from './pages/Home';
 import Fullstack from './pages/Fullstack';
+import Landing from './pages/Landing';
 import Ecommerce from './pages/Ecommerce';
 import WebDeveloperKyiv from './pages/WebDeveloperKyiv';
 import BlogIndex from './pages/BlogIndex';
@@ -34,6 +35,7 @@ export function render() {
   return {
     '/': renderRoute('/', h(Home)),
     '/services/fullstack': renderRoute('/services/fullstack', h(Fullstack)),
+    '/services/landing': renderRoute('/services/landing', h(Landing)),
     '/services/ecommerce': renderRoute('/services/ecommerce', h(Ecommerce)),
     '/services/web-developer-kyiv': renderRoute('/services/web-developer-kyiv', h(WebDeveloperKyiv)),
     '/blog/': renderRoute('/blog', h(BlogIndex)),

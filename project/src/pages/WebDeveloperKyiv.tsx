@@ -8,8 +8,8 @@ export default function WebDeveloperKyiv() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Seo
-        title="Веб-розробник Київ — замовити сайт у веб-студії KRVTSV CORP"
-        description="Веб-розробник у Києві: лендінги, бізнес-сайти, інтернет-магазини та фуллстак проєкти. KRVTSV CORP працює з клієнтами з Києва та всієї України. Запуск від 3 днів."
+        title="Веб-розробник Київ — замовити лендінг та сайт | KRVTSV CORP"
+        description="Веб-розробник у Києві: замовити лендінг, бізнес-сайт, інтернет-магазин або фуллстак проєкт. KRVTSV CORP працює з клієнтами з Києва та всієї України. Запуск від 3 днів."
         path="/services/web-developer-kyiv"
       />
       <Header />

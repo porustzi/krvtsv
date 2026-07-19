@@ -6,6 +6,7 @@
 ## Основні сторінки
 
 - [Головна](https://krvtsvcorp.pp.ua/) — Послуги веб-студії: лендінги, бізнес-сайти, e-commerce, редизайн. Портфоліо, ціни, FAQ.
+- [Лендінг під ключ](https://krvtsvcorp.pp.ua/services/landing) — Замовити landing page: односторінковий сайт для реклами та збору заявок на React/Vite. Від 4000 грн.
 - [Фуллстак розробка](https://krvtsvcorp.pp.ua/services/fullstack) — Розробка full-stack додатків на React + Node.js + TypeScript. API, адмінки, бази даних.
 - [E-commerce](https://krvtsvcorp.pp.ua/services/ecommerce) — Розробка інтернет-магазинів: каталог, кошик, оплата, адмінка.
 - [Веб-розробник Київ](https://krvtsvcorp.pp.ua/services/web-developer-kyiv) — Послуги веб-розробника в Києві та Україні.

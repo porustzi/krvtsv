@@ -1,6 +1,7 @@
 https://krvtsv.pages.dev/* https://krvtsvcorp.pp.ua/:splat 301
 
 /services/fullstack https://krvtsvcorp.pp.ua/services/fullstack/ 301
+/services/landing https://krvtsvcorp.pp.ua/services/landing/ 301
 /services/ecommerce https://krvtsvcorp.pp.ua/services/ecommerce/ 301
 /services/web-developer-kyiv https://krvtsvcorp.pp.ua/services/web-developer-kyiv/ 301
 /blog https://krvtsvcorp.pp.ua/blog/ 301
