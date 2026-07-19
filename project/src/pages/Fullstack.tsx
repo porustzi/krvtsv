@@ -53,7 +53,7 @@ export default function Fullstack() {
                 'React/Vite фронтенд з адаптивною версткою',
                 'Node.js бекенд + REST/GraphQL API',
                 'Інтеграції: платежі, CRM, Telegram-боти',
-                'Деплой на Cloudflare/Vercel + HTTPS',
+                'Деплой на Cloudflare + HTTPS',
                 'Базова SEO-оптимізація та швидкість',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">

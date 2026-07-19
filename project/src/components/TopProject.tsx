@@ -37,43 +37,43 @@ const cases: Case[] = [
       'Новини та розклад он-лайн',
       'Cloudflare — безпека + швидкість',
     ],
-    url: '#',
+    url: 'https://lizei167.pages.dev',
   },
   {
-    name: 'ShopFlow',
-    type: 'Інтернет-магазин',
+    name: 'Buksy',
+    type: 'Інтернет-магазин книг',
     img: '/images/case-shop.svg',
     category: 'E-commerce',
     year: '2026',
     duration: '18 днів',
     price: 'від 15 000 грн',
-    desc: 'Інтернет-магазин з каталогом, кошиком, платіжною системою та повноцінною адмінкою.',
-    tech: ['React', 'Node.js', 'Stripe', 'PostgreSQL'],
+    desc: 'Інтернет-магазин книг з каталогом, кошиком, платіжною системою та адмінкою.',
+    tech: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
     results: [
-      'Каталог + фільтри та пошук',
-      'Оплата LiqPay / Stripe / Mono',
+      'Каталог книг + фільтри та пошук',
+      'Кошик та оплата',
       'Адмінка для товарів і замовлень',
-      'Інтеграція з Nova Poshta',
+      'TypeScript на фронті та бекенді',
     ],
-    url: '#',
+    url: 'https://buksy-shop.pages.dev',
   },
   {
-    name: 'NovaLand',
-    type: 'Лендінг під ключ',
+    name: '5 AM',
+    type: 'Бренд-лендінг',
     img: '/images/case-landing.svg',
     category: 'Лендінг',
     year: '2026',
     duration: '4 дні',
     price: 'від 4 000 грн',
-    desc: 'Продаючий лендінг для нерухомості: форма заявок, аналітика, швидкість 0.8 с.',
-    tech: ['React', 'Vite', 'Tailwind', 'GA4'],
+    desc: 'Стильний лендінг для бренду: мінімалістичний дизайн, висока швидкість, адаптив.',
+    tech: ['React', 'Vite', 'Tailwind', 'Framer Motion'],
     results: [
-      '+38% заявок після запуску',
-      'Швидкість завантаження 0.8 с',
-      'Адаптив + A/B тести',
-      'Підключено Meta Pixel',
+      'Унікальний дизайн під бренд',
+      'Швидкість завантаження до 1 с',
+      'Повний адаптив',
+      'Анімації на Framer Motion',
     ],
-    url: '#',
+    url: 'https://5-am.pages.dev',
   },
 ];
 
@@ -168,7 +168,7 @@ function CaseCard({ item, i }: { item: Case; i: number }) {
           className="group mt-auto inline-flex items-center justify-center gap-2 bg-gray-900 text-white font-black uppercase text-xs sm:text-sm px-6 py-4 rounded-full hover:bg-rose-500 transition-colors whitespace-nowrap"
         >
           <ExternalLink size={16} className="flex-shrink-0" />
-          Переглянути сайт
+          Відкрити проєкт
         </a>
       </div>
     </motion.div>

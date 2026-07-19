@@ -35,7 +35,7 @@ export default function BlogSiteFromScratch() {
 
           <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">3. Вибір хостингу</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Для сучасних сайтів — Cloudflare Pages, Vercel або Netlify. Швидко, безпечно, недорого. Я деплою саме туди.
+            Для сучасних сайтів — Cloudflare Pages. Швидко, безпечно, недорого. Я деплою саме туди.
           </p>
 
           <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">4. Дизайн — не копіюй шаблони</h2>
