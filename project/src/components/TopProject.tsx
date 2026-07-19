@@ -24,7 +24,7 @@ const cases: Case[] = [
   {
     name: 'Lyzeum 167',
     type: 'Школа у Києві',
-    img: '/images/case-school.svg',
+    img: '/images/case-school.jpg',
     category: 'Освіта / Соцпроєкт',
     year: '2026',
     duration: '2 тижні',
@@ -42,7 +42,7 @@ const cases: Case[] = [
   {
     name: 'Buksy',
     type: 'Інтернет-магазин книг',
-    img: '/images/case-shop.svg',
+    img: '/images/case-shop.jpg',
     category: 'E-commerce',
     year: '2026',
     duration: '18 днів',
@@ -60,7 +60,7 @@ const cases: Case[] = [
   {
     name: '5 AM',
     type: 'Бренд-лендінг',
-    img: '/images/case-landing.svg',
+    img: '/images/case-landing.jpg',
     category: 'Лендінг',
     year: '2026',
     duration: '4 дні',
