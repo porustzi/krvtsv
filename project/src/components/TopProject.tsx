@@ -29,15 +29,15 @@ const cases: Case[] = [
     year: '2026',
     duration: '2 тижні',
     price: 'від 10 000 грн',
-    desc: 'Повна модернізація шкільного порталу: швидкий React-стек, адаптивність, миттєві новини.',
+    desc: 'Оновили шкільний портал: перевели на React/Vite, додали адаптив, новини та розклад у реальному часі.',
     tech: ['React', 'Vite', 'Tailwind', 'Framer Motion'],
     results: [
       'Перехід зі статики на React/Vite',
-      'Адаптив під смартфони учнів',
-      'Миттєві новини та розклад',
-      'Безпечний деплой на Cloudflare',
+      'Адаптив під телефони учнів',
+      'Новини та розклад он-лайн',
+      'Cloudflare — безпека + швидкість',
     ],
-    url: 'https://lyzeum167.com',
+    url: '#',
   },
   {
     name: 'ShopFlow',
@@ -47,15 +47,15 @@ const cases: Case[] = [
     year: '2026',
     duration: '18 днів',
     price: 'від 15 000 грн',
-    desc: 'Магазин з кошиком, фільтрами, оплатою LiqPay/Stripe та адмінкою товарів.',
+    desc: 'Інтернет-магазин з каталогом, кошиком, платіжною системою та повноцінною адмінкою.',
     tech: ['React', 'Node.js', 'Stripe', 'PostgreSQL'],
     results: [
-      'Каталог + фільтри товарів',
-      'Оплата LiqPay / Stripe',
-      'Кабінет клієнта та адмінка',
+      'Каталог + фільтри та пошук',
+      'Оплата LiqPay / Stripe / Mono',
+      'Адмінка для товарів і замовлень',
       'Інтеграція з Nova Poshta',
     ],
-    url: 'https://lyzeum167.com',
+    url: '#',
   },
   {
     name: 'NovaLand',
@@ -65,15 +65,15 @@ const cases: Case[] = [
     year: '2026',
     duration: '4 дні',
     price: 'від 4 000 грн',
-    desc: 'Продаючий односторінковий сайт для нерухомості з формою заявок та аналітикою.',
+    desc: 'Продаючий лендінг для нерухомості: форма заявок, аналітика, швидкість 0.8 с.',
     tech: ['React', 'Vite', 'Tailwind', 'GA4'],
     results: [
       '+38% заявок після запуску',
-      'Завантаження 0.8s',
-      'Адаптив + A/B секції',
-      'Підключення Meta Pixel',
+      'Швидкість завантаження 0.8 с',
+      'Адаптив + A/B тести',
+      'Підключено Meta Pixel',
     ],
-    url: 'https://lyzeum167.com',
+    url: '#',
   },
 ];
 
@@ -85,7 +85,8 @@ function CaseCard({ item, i }: { item: Case; i: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: i * 0.12 }}
-      className="bg-white rounded-3xl overflow-hidden border-2 border-gray-100 hover:border-rose-200 transition-all duration-300 flex flex-col"
+      whileHover={{ y: -6 }}
+      className="bg-white rounded-3xl overflow-hidden border-2 border-gray-100 hover:border-rose-200 shadow-sm hover:shadow-2xl hover:shadow-rose-500/10 transition-all duration-300 flex flex-col"
     >
       <div className="relative bg-gray-900">
         <div className="bg-gray-800 px-4 py-3 flex items-center gap-2">
@@ -185,12 +186,12 @@ export default function TopProject() {
           transition={{ duration: 0.6 }}
           className="mb-12 sm:mb-16"
         >
-          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Реальні кейси</p>
+          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Портфоліо</p>
           <h2 className="text-[clamp(2rem,7vw,5rem)] font-black uppercase leading-tight text-gray-900 break-words">
             НАШІ<br />{' '}<span className="text-rose-500">ПРОЄКТИ</span>
           </h2>
           <p className="text-gray-500 mt-4 text-base sm:text-sm md:text-lg max-w-xl break-words">
-            Три живі проєкти, які ми запустили. Реальні терміни, ціни та результати.
+            Реальні роботи з реальними термінами та цінами. Без постановки.
           </p>
         </motion.div>
 

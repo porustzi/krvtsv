@@ -62,16 +62,17 @@ export default function Prices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={plan.highlighted ? { y: -2 } : { y: -4 }}
                 className={`relative rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 border-2 h-full ${
                   plan.highlighted
                     ? 'bg-gray-900 text-white border-gray-900 shadow-xl shadow-rose-500/10 scale-[1.02] md:scale-105 z-10'
-                    : 'bg-white border-gray-100 hover:border-rose-200'
+                    : 'bg-white border-gray-100 hover:border-rose-200 hover:shadow-xl hover:shadow-rose-500/10'
                 }`}
               >
               {plan.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-rose-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full whitespace-nowrap shadow-lg">
-                    Популярний вибір
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-rose-600 to-red-500 text-white text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-full whitespace-nowrap shadow-lg shadow-rose-500/30">
+                    Популярний
                   </span>
                 </div>
               )}

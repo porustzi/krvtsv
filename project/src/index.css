@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  ::selection {
+    background-color: #f43f5e;
+    color: #fff;
+  }
+
+  /* Custom scrollbar — тонка, в тон сайту */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e11d48;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #be123c;
+  }
+
+  /* Firefox scrollbar */
+  :root {
+    scrollbar-color: #e11d48 #f1f5f9;
+    scrollbar-width: thin;
+  }
+}
+
 /* Self-hosted Inter (no render-blocking Google Fonts request) */
 @font-face {
   font-family: 'Inter';
@@ -69,6 +97,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    background-color: #fff;
+    background-image: radial-gradient(#f1f5f9 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
   }
 
   /* Текст никогда не вылезает за рамки (но НЕ режем слова посередине на мобилке) */

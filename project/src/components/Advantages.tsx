@@ -58,7 +58,8 @@ export default function Advantages() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="group relative bg-white border-2 border-gray-100 rounded-3xl p-6 md:p-8 hover:border-rose-200 transition-all duration-300 h-full"
+                  whileHover={{ y: -4 }}
+                  className="group relative bg-white border-2 border-gray-100 rounded-3xl p-6 md:p-8 hover:border-rose-200 shadow-sm hover:shadow-xl hover:shadow-rose-500/10 transition-all duration-300 h-full"
                 >
                   <div className="flex items-start justify-between mb-6">
                     <Magnetic strength={0.3}>

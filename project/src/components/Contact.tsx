@@ -120,19 +120,19 @@ export default function Contact() {
                   <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Ім'я</label>
                   <input type="text" name="name" required
                     placeholder="Твоє ім'я"
-                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
+                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-500 focus:ring-4 focus:ring-rose-500/10 transition-all text-base" />
                 </div>
                 <div>
                   <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Telegram або email</label>
                   <input type="text" name="contact" required
                     placeholder="@username або email"
-                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors text-base" />
+                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-500 focus:ring-4 focus:ring-rose-500/10 transition-all text-base" />
                 </div>
                 <div>
                   <label className="block text-xs sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Про проєкт</label>
                   <textarea name="message" rows={4} required
                     placeholder="Розкажи про свій проєкт..."
-                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-300 transition-colors resize-none text-base" />
+                    className="w-full bg-gray-50 border-2 border-gray-100 rounded-xl px-5 py-4 md:px-5 md:py-4 text-gray-900 font-semibold placeholder-gray-300 focus:outline-none focus:border-rose-500 focus:ring-4 focus:ring-rose-500/10 transition-all resize-none text-base" />
                 </div>
 
                 {error && (
@@ -141,7 +141,7 @@ export default function Contact() {
 
                 <Magnetic strength={0.25} className="w-full">
                   <button type="submit" disabled={loading}
-                    className="w-full bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs md:text-sm py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-all duration-300 disabled:opacity-60 shadow-lg hover:shadow-rose-500/20 active:scale-95">
+                    className="w-full bg-gray-900 text-white font-black uppercase tracking-widest text-sm sm:text-xs md:text-sm py-5 sm:py-4 rounded-full hover:bg-rose-500 transition-all duration-300 disabled:opacity-60 shadow-lg hover:shadow-rose-500/30 active:scale-95 hover:scale-[1.02]">
                     {loading ? 'Відправляємо...' : 'Відправити заявку'}
                   </button>
                 </Magnetic>

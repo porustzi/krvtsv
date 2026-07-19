@@ -35,6 +35,15 @@ export default function Footer() {
             ))}
           </div>
 
+          <div className="flex items-center gap-4">
+            <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-rose-500 transition-colors whitespace-nowrap">
+              Telegram
+            </a>
+            <a href="mailto:krvtsvcorp@gmail.com" className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-rose-500 transition-colors whitespace-nowrap">
+              Email
+            </a>
+          </div>
+
           <p className="text-gray-600 text-[10px] sm:text-xs font-semibold uppercase tracking-widest whitespace-nowrap">
             &copy; {new Date().getFullYear()} KRVTSV CORP
           </p>
