@@ -20,22 +20,22 @@ export default function BlogLandingVsWebsite() {
             Лендінг чи повноцінний сайт: що обрати бізнесу
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed mb-8">
-            Найчастіше питання від підприємців: «Мені лендінг чи повноцінний сайт?». Коротка відповідь — залежить від мети. Розбираємо детально, щоб не переплатити.
+            Одне з найпоширеніших запитань від підприємців: лендінг чи повноцінний сайт? Відповідь залежить від мети. Розбираємо варіанти, щоб ви не переплатили за непотрібний функціонал.
           </p>
 
           <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Що таке лендінг</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Лендінг (landing page) — це односторінковий сайт з однією метою: отримати заявку чи продаж. Ідеально для запуску реклами в Facebook/Instagram/Google Ads. Робимо за 3–5 днів, ціна — від 4 000 грн.
+            Лендінг (landing page) — односторінковий сайт з однією ціллю: отримати заявку або продаж. Оптимальне рішення для запуску реклами в Facebook, Instagram або Google Ads. Термін — 3–5 днів, вартість — від 4 000 грн.
           </p>
 
           <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Коли потрібен повноцінний сайт</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Якщо у вас каталог послуг, блог, кілька напрямків бізнесу — потрібен корпоративний сайт зі сторінками. Це більше контенту, але й більше точок входу з пошуку. Від 10 000 грн, термін 7–14 днів.
+            Якщо у вас кілька напрямків бізнесу, каталог послуг або блог — потрібен багатосторінковий сайт. Це дає більше точок входу з пошуку та краще покриття запитань клієнтів. Вартість — від 10 000 грн, термін — 7–14 днів.
           </p>
 
-          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">А коли інтернет-магазин</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Коли потрібен інтернет-магазин</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Продаєте товари онлайн? Тоді потрібен магазин з кошиком, оплатою та каталогом. Це окремий тип проєкту — <Link to="/services/ecommerce" className="text-rose-600 font-bold hover:underline">розробка e-commerce</Link> від 15 000 грн.
+            Продаєте товари онлайн? Тоді потрібен магазин з кошиком, платіжною системою та каталогом. Це окремий тип проєкту — <Link to="/services/ecommerce" className="text-rose-600 font-bold hover:underline">розробка e-commerce</Link> від 15 000 грн.
           </p>
 
           <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Порівняння в таблиці</h2>
@@ -59,12 +59,12 @@ export default function BlogLandingVsWebsite() {
 
           <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Висновок</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Почніть з лендінгу, якщо тестуєте гіпотезу. Переросте — додамо сторінки. Потрібна допомога з вибором? <Link to="/services/web-developer-kyiv" className="text-rose-600 font-bold hover:underline">Замовіть сайт у веб-студії Київ</Link>.
+            Почніть з лендінгу, якщо тестуєте гіпотезу. Якщо бізнес зросте — розширите до багатосторінкового сайту. Потрібна допомога з вибором? <Link to="/services/web-developer-kyiv" className="text-rose-600 font-bold hover:underline">Замовте сайт у веб-студії Київ</Link>.
           </p>
 
           <div className="mt-12 bg-rose-50 rounded-3xl p-8 text-center">
             <h3 className="text-2xl font-black text-gray-900 mb-3">Не знаєте, що обрати?</h3>
-            <p className="text-gray-500 mb-6">Напишіть нам — порадимо безкоштовно.</p>
+            <p className="text-gray-500 mb-6">Напишіть нам — проконсультуємо безкоштовно.</p>
             <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-rose-600 transition-colors">
               Написати нам
             </a>

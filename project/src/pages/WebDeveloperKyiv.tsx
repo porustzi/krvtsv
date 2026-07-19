@@ -21,7 +21,7 @@ export default function WebDeveloperKyiv() {
               ВЕБ-РОЗРОБНИК<br />{' '}<span className="text-rose-500">У КИЄВІ</span>
             </h1>
             <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-2xl mb-8 break-words">
-              Шукаєте веб-розробника чи веб-студію в Києві? KRVTSV CORP створює сайти, які продають: від лендінгу до фуллстак-продукту. Працюємо з клієнтами по всій Україні — онлайн, без зайвих зустрічей.
+              Шукаєте веб-розробника в Києві? KRVTSV CORP створює сайти від лендінгу до фуллстак-продукту. Працюємо з клієнтами по всій Україні — онлайн, без зайвих зустрічей.
             </p>
             <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-rose-500 transition-colors">
               Замовити сайт
@@ -39,7 +39,7 @@ export default function WebDeveloperKyiv() {
             <div className="bg-white rounded-3xl p-8">
               <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center mb-5"><Code2 size={24} className="text-white" /></div>
               <h2 className="text-xl font-black uppercase text-gray-900 mb-3">Сучасний стек</h2>
-              <p className="text-gray-500 leading-relaxed">React, Vite, Tailwind, Node.js. Швидкі сайти з високим Lighthouse і базовою SEO-оптимізацією.</p>
+              <p className="text-gray-500 leading-relaxed">React, Vite, Tailwind, Node.js. Висока швидкість завантаження, високі показники Lighthouse, SEO-оптимізація.</p>
             </div>
             <div className="bg-white rounded-3xl p-8">
               <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center mb-5"><Smartphone size={24} className="text-white" /></div>
@@ -51,7 +51,7 @@ export default function WebDeveloperKyiv() {
 
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-8">Що ми робимо у Києві та Україні</h2>
+            <h2 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-8">Послуги веб-розробника в Києві</h2>
             <ul className="space-y-4">
               {[
                 'Лендінги під ключ (від 3 днів)',
@@ -73,8 +73,8 @@ export default function WebDeveloperKyiv() {
 
         <section className="py-16 bg-gray-900 text-center">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-6">Веб-розробник поруч</h2>
-            <p className="text-gray-400 mb-8">Київ і вся Україна — замовте сайт у надійній веб-студії.</p>
+            <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-6">Веб-розробник у Києві</h2>
+            <p className="text-gray-400 mb-8">Київ та вся Україна — замовте сайт у надійній веб-студії.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/services/fullstack" className="inline-flex items-center gap-2 bg-rose-500 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
                 Фуллстак

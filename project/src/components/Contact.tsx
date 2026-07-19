@@ -54,9 +54,8 @@ export default function Contact() {
             </h2>
 
             <p className="text-gray-500 text-lg sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 max-w-md mx-auto lg:mx-0 break-words">
-              Маєш ідею або вже точно знаєш, що хочеш?
-              Напиши — відповімо протягом декількох годин
-              і одразу до діла.
+              Є ідея або вже знаєте, що потрібно? Напишіть — відповімо
+              протягом кількох годин і почнемо роботу.
             </p>
 
             <div className="space-y-4 md:space-y-6 max-w-sm mx-auto lg:mx-0">
@@ -104,10 +103,10 @@ export default function Contact() {
               >
                 <CheckCircle size={48} className="text-rose-500 mx-auto mb-4" />
                 <h3 className="text-2xl md:text-2xl font-black uppercase text-gray-900 mb-3 break-words">
-                  Заявку підготовано!
+                  Заявка готова!
                 </h3>
                 <p className="text-gray-500 text-base sm:text-sm md:text-base break-words">
-                  Відкрився Telegram з готовим повідомленням — залишилось натиснути «Надіслати». Якщо Telegram не відкрився, напиши нам вручну: <span className="font-bold text-gray-900">@holdingtokens</span>.
+                  Telegram відкрився з попередньо заповненим повідомленням — залишилось натиснути «Надіслати». Якщо Telegram не відкрився, напишіть вручну: <span className="font-bold text-gray-900">@holdingtokens</span>.
                 </p>
               </motion.div>
             ) : (

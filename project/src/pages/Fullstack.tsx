@@ -21,7 +21,7 @@ export default function Fullstack() {
               ФУЛЛСТАК<br />{' '}<span className="text-rose-500">РОЗРОБКА В УКРАЇНІ</span>
             </h1>
             <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-2xl mb-8 break-words">
-              Потрібен продукт «під ключ»? KRVTSV CORP бере весь цикл розробки: фронтенд на React/Vite, бекенд на Node.js, бази даних, інтеграції та деплой. Один виконавець — менше комунікації і швидший запуск.
+              Потрібен повноцінний продукт? Беремо весь цикл: фронтенд на React/Vite, бекенд на Node.js, бази даних, інтеграції та деплой. Один виконавець — менше комунікації та швидший запуск.
             </p>
             <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-rose-500 transition-colors">
               Замовити фуллстак проєкт
@@ -34,7 +34,7 @@ export default function Fullstack() {
             <div className="bg-white rounded-3xl p-8">
               <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center mb-5"><Code2 size={24} className="text-white" /></div>
               <h2 className="text-2xl font-black uppercase text-gray-900 mb-3">Frontend</h2>
-              <p className="text-gray-500 leading-relaxed">React 18, Vite, Tailwind CSS, Framer Motion. Адаптивна верстка, швидке завантаження (LCP &lt; 2.5с), доступність WCAG.</p>
+              <p className="text-gray-500 leading-relaxed">React 18, Vite, Tailwind CSS, Framer Motion. Адаптивна верстка, швидкість LCP до 0.8 с, доступність відповідно до WCAG.</p>
             </div>
             <div className="bg-white rounded-3xl p-8">
               <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center mb-5"><Server size={24} className="text-white" /></div>
@@ -46,7 +46,7 @@ export default function Fullstack() {
 
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-8">
-            <h2 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-8">Що входить у фуллстак проєкт</h2>
+            <h2 className="text-3xl md:text-4xl font-black uppercase text-gray-900 mb-8">Що входить у fullstack-проєкт</h2>
             <ul className="space-y-4">
               {[
                 'Архітектура та проєктування бази даних',
@@ -67,8 +67,8 @@ export default function Fullstack() {
 
         <section className="py-16 bg-gray-900 text-center">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-6">Потрібен фуллстак розробник?</h2>
-            <p className="text-gray-400 mb-8">Напиши нам у Telegram — обговоримо завдання та терміни. Запуск MVP від 7 днів.</p>
+            <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-6">Потрібен fullstack-розробник?</h2>
+            <p className="text-gray-400 mb-8">Напишіть у Telegram — обговоримо завдання, терміни та вартість. Запуск MVP від 7 днів.</p>
             <Link to="/#contact" className="inline-flex items-center gap-2 bg-rose-500 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
               Зв'язатися
             </Link>

@@ -21,7 +21,7 @@ export default function Ecommerce() {
               РОЗРОБКА<br />{' '}<span className="text-rose-500">E-COMMERCE САЙТІВ</span>
             </h1>
             <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-2xl mb-8 break-words">
-              Запускаємо інтернет-магазини, які продають: швидкий каталог, зручний кошик, надійні платежі та інтеграція з доставкою. Від MVP до масштабованого магазину.
+              Створюємо інтернет-магазини, які реально продають: каталог, зручний кошик, безпечні платежі та інтеграція з доставкою. Від простого магазину до масштабованої платформи.
             </p>
             <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-rose-500 transition-colors">
               Замовити магазин
@@ -34,7 +34,7 @@ export default function Ecommerce() {
             <div className="bg-white rounded-3xl p-8">
               <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center mb-5"><ShoppingCart size={24} className="text-white" /></div>
               <h2 className="text-xl font-black uppercase text-gray-900 mb-3">Каталог і кошик</h2>
-              <p className="text-gray-500 leading-relaxed">Категорії, фільтри, пошук, кошик та оформлення замовлення. Зручно з телефона.</p>
+              <p className="text-gray-500 leading-relaxed">Категорії, фільтри, пошук, кошик та оформлення замовлення. Зручно працювати з телефона.</p>
             </div>
             <div className="bg-white rounded-3xl p-8">
               <div className="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center mb-5"><CreditCard size={24} className="text-white" /></div>
@@ -73,8 +73,8 @@ export default function Ecommerce() {
 
         <section className="py-16 bg-gray-900 text-center">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-6">Запусти свій магазин</h2>
-            <p className="text-gray-400 mb-8">Напиши нам у Telegram — розрахуємо вартість і терміни під твій асортимент.</p>
+            <h2 className="text-3xl md:text-5xl font-black uppercase text-white mb-6">Запустіть свій магазин</h2>
+            <p className="text-gray-400 mb-8">Напишіть у Telegram — розрахуємо вартість і терміни під ваш асортимент.</p>
             <Link to="/#contact" className="inline-flex items-center gap-2 bg-rose-500 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
               Зв'язатися
             </Link>

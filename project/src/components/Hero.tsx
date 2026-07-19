@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="min-w-0">
             <div className="mb-4 hero-rise" style={{ animationDelay: '0ms' }}>
               <span className="inline-block text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 bg-white/70 backdrop-blur border border-rose-100 px-4 sm:px-4 py-3 sm:py-2 rounded-full shadow-sm">
-                Веб-студія / Ukraine
+                Веб-студія в Києві / Ukraine
               </span>
             </div>
 
@@ -39,7 +39,7 @@ export default function Hero() {
 
             <div className="mt-6 mb-4 hero-rise" style={{ animationDelay: '160ms' }}>
               <p className="text-[clamp(1rem,4vw,1.4rem)] font-bold uppercase tracking-wide text-gray-500 break-words">
-                ШВИДКО. СТИЛЬНО. НОРМАЛЬНО.
+                ШВИДКО. СУЧАСНО. РЕЗУЛЬТАТИВНО.
               </p>
               <p className="text-[clamp(1rem,4vw,1.4rem)] font-black uppercase tracking-wide text-rose-600 break-words">
                 БЕЗ ПЕРЕПЛАТ
@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
 
             <p className="text-gray-500 text-lg sm:text-base leading-relaxed max-w-md mb-10 break-words hero-rise" style={{ animationDelay: '240ms' }}>
-              Створюємо сайти, що реально працюють на ваш бізнес — без зайвих слів та корпоративного нудного дизайну.
+              Створюємо сайти, які приносять заявки та клієнтів. Жодних шаблонів — тільки унікальні рішення під ваш бізнес.
             </p>
 
             <div className="flex flex-wrap gap-3 sm:gap-4 hero-rise" style={{ animationDelay: '320ms' }}>
@@ -104,9 +104,9 @@ export default function Hero() {
                 <div className="space-y-4">
                   {[
                     { name: 'Landing Page', meta: 'від 3 днів', tint: 'from-rose-500 to-pink-500' },
-                    { name: 'Business Site', meta: 'від 5 днів', tint: 'from-rose-600 to-red-500' },
-                    { name: 'E-commerce', meta: 'від 7 днів', tint: 'from-amber-500 to-orange-500' },
-                    { name: 'Redesign', meta: 'від 2 днів', tint: 'from-emerald-500 to-teal-500' },
+                    { name: 'Бізнес-сайт', meta: 'від 5 днів', tint: 'from-rose-600 to-red-500' },
+                    { name: 'Інтернет-магазин', meta: 'від 7 днів', tint: 'from-amber-500 to-orange-500' },
+                    { name: 'Редизайн', meta: 'від 2 днів', tint: 'from-emerald-500 to-teal-500' },
                   ].map((item, i) => (
                     <motion.div
                       key={item.name}
@@ -136,7 +136,7 @@ export default function Hero() {
                   className="mt-8 bg-gradient-to-r from-gray-900 to-rose-900 rounded-2xl px-6 py-5 text-white"
                 >
                   <p className="text-sm sm:text-xs uppercase tracking-widest text-rose-400 font-bold mb-1">Наш підхід</p>
-                  <p className="font-black text-lg leading-tight">Прямий контакт. Без менеджерів. Без зайвих витрат.</p>
+                  <p className="font-black text-lg leading-tight">Прямий контакт з розробником. Без посередників. Без зайвих витрат.</p>
                 </motion.div>
 
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-rose-400 to-red-500 rounded-full opacity-30 blur-lg" />
