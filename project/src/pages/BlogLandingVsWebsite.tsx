@@ -7,38 +7,38 @@ export default function BlogLandingVsWebsite() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Seo
-        title="Лендінг чи повноцінний сайт: що обрати бізнесу у 2026 | KRVTSV CORP"
-        description="Лендінг або сайт — що вибрати для бізнесу? Порівнюємо вартість, терміни, конверсію та коли потрібен інтернет-магазин. Гайд від веб-студії KRVTSV CORP."
+        title="Лендінг чи сайт: шо краще для бізнесу? | KRVTSV CORP"
+        description="Лендінг чи повноцінний сайт — що обрати? Порівнюю ціну, терміни, конверсію. Коли лендінг працює, а коли потрібен магазин. Досвід веб-розробника."
         path="/blog/landing-vs-website"
         ogType="article"
       />
       <Header />
       <main>
         <article className="pt-32 pb-16 md:pt-40 md:pb-24 max-w-3xl mx-auto px-4 sm:px-8">
-          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Гайд / Вибір · 10 липня 2026</p>
+          <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Вибір · 10 квітня 2026</p>
           <h1 className="text-4xl md:text-5xl font-black leading-tight text-gray-900 mb-6 break-words">
-            Лендінг чи повноцінний сайт: що обрати бізнесу
+            Лендінг чи сайт: шо краще для бізнесу?
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed mb-8">
-            Одне з найпоширеніших запитань від підприємців: лендінг чи повноцінний сайт? Відповідь залежить від мети. Розбираємо варіанти, щоб ви не переплатили за непотрібний функціонал.
+            Найпопулярніше питання, яке мені задають: «Слухай, мені лендінг робити чи нормальний сайт?». Коротка відповідь — залежить. Але давай розберемо детально, щоб не викинути гроші на те, що не працює.
           </p>
 
-          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Що таке лендінг</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Коли лендінг — твій варіант</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Лендінг (landing page) — односторінковий сайт з однією ціллю: отримати заявку або продаж. Оптимальне рішення для запуску реклами в Facebook, Instagram або Google Ads. Термін — 3–5 днів, вартість — від 4 000 грн.
+            Лендінг — це одна сторінка з однією ціллю: заявка або продаж. Ідеально підходить, якщо ти запускаєш рекламу в Facebook/Instagram/Google і хочеш швидко тестувати гіпотезу. Роблю за 3–5 днів, ціна — від 4 000 грн.
           </p>
 
           <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Коли потрібен повноцінний сайт</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Якщо у вас кілька напрямків бізнесу, каталог послуг або блог — потрібен багатосторінковий сайт. Це дає більше точок входу з пошуку та краще покриття запитань клієнтів. Вартість — від 10 000 грн, термін — 7–14 днів.
+            Якщо в тебе кілька напрямків бізнесу, каталог послуг або ти хочеш вести блог — однією сторінкою не обійтись. Багатосторінковий сайт дає більше точок входу з пошуку Google і краще покриває питання клієнтів. Вартість — від 10 000 грн, термін — 7–14 днів.
           </p>
 
-          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Коли потрібен інтернет-магазин</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">А коли вже інтернет-магазин</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Продаєте товари онлайн? Тоді потрібен магазин з кошиком, платіжною системою та каталогом. Це окремий тип проєкту — <Link to="/services/ecommerce" className="text-rose-600 font-bold hover:underline">розробка e-commerce</Link> від 15 000 грн.
+            Продаєш товари онлайн? Тут без магазину ніяк. Кошик, оплата, каталог — це вже окремий проєкт. <Link to="/services/ecommerce" className="text-rose-600 font-bold hover:underline">Розробка e-commerce</Link> від 15 000 грн.
           </p>
 
-          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Порівняння в таблиці</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Коротке порівняння</h2>
           <div className="overflow-x-auto mb-6">
             <table className="w-full text-left text-sm border-collapse">
               <thead>
@@ -57,14 +57,14 @@ export default function BlogLandingVsWebsite() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Висновок</h2>
+          <h2 className="text-2xl font-black text-gray-900 mt-10 mb-4">Коротко по ділу</h2>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Почніть з лендінгу, якщо тестуєте гіпотезу. Якщо бізнес зросте — розширите до багатосторінкового сайту. Потрібна допомога з вибором? <Link to="/services/web-developer-kyiv" className="text-rose-600 font-bold hover:underline">Замовте сайт у веб-студії Київ</Link>.
+            Тестуєш гіпотезу — бери лендінг. Бізнес росте — розширимо до повноцінного сайту. Сумніваєшся, що обрати? <Link to="/services/web-developer-kyiv" className="text-rose-600 font-bold hover:underline">Напиши мені</Link> — підкажу, що краще під твою задачу.
           </p>
 
           <div className="mt-12 bg-rose-50 rounded-3xl p-8 text-center">
-            <h3 className="text-2xl font-black text-gray-900 mb-3">Не знаєте, що обрати?</h3>
-            <p className="text-gray-500 mb-6">Напишіть нам — проконсультуємо безкоштовно.</p>
+            <h3 className="text-2xl font-black text-gray-900 mb-3">Не знаєш, що вибрати?</h3>
+            <p className="text-gray-500 mb-6">Пиши в Telegram — розберемось безкоштовно.</p>
             <a href="https://t.me/holdingtokens" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gray-900 text-white font-black uppercase tracking-widest text-sm px-8 py-5 rounded-full hover:bg-rose-600 transition-colors">
               Написати нам
             </a>

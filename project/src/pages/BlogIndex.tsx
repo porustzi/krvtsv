@@ -5,35 +5,35 @@ import Footer from '../components/Footer';
 
 const posts = [
   {
-    title: 'Лендінг чи повноцінний сайт: що обрати бізнесу',
-    desc: 'Порівнюємо вартість, терміни та конверсію. Коли достатньо лендінгу, а коли потрібен повноцінний сайт або магазин.',
+    title: 'Лендінг чи сайт: шо краще для бізнесу?',
+    desc: 'Кидати гроші на лендінг чи робити повноцінний сайт? Розбираю, коли який варіант працює, а коли це просто викинуті гроші.',
     href: '/blog/landing-vs-website',
     tag: 'Вибір',
-    date: '10 липня 2026',
+    date: '10 квітня 2026',
     read: '5 хв',
   },
   {
-    title: 'Чому сайт не дає заявок і як це виправити',
-    desc: '7 причин, чого форма не працює: швидкість, довіра, адаптивність, SEO. Чекліст для самостійного аудиту.',
+    title: 'Сайт є, а заявок нема? Розбираю причини',
+    desc: '7 причин, чому твій сайт не приносить клієнтів. Від швидкості до форми заявки — що поправити, щоб пішли заявки.',
     href: '/blog/no-leads-from-site',
-    tag: 'Проблема',
-    date: '12 липня 2026',
+    tag: 'Розбір',
+    date: '16 квітня 2026',
     read: '6 хв',
   },
   {
-    title: 'Сайт для бізнесу з нуля: чекліст',
-    desc: '10 кроків від ідеї до запуску: домен, хостинг, дизайн, текст, SEO, аналітика.',
+    title: 'Сайт для бізнесу з нуля: покроковий план',
+    desc: 'Вирішив зробити сайт, але не знаєш з чого почати? 10 простих кроків — від домену до запуску. Без води.',
     href: '/blog/site-from-scratch-checklist',
     tag: 'Старт',
-    date: '14 липня 2026',
+    date: '22 квітня 2026',
     read: '7 хв',
   },
   {
-    title: 'Чому React + Vite — оптимальний вибір для сайту',
-    desc: 'Швидкість, SEO, підтримка. Порівняння з WordPress і чистим HTML. Пояснюємо на прикладах.',
+    title: 'Чому я роблю сайти на React + Vite',
+    desc: 'Чому не WordPress, не HTML, не Tilda. Пояснюю на пальцях, чому цей стек швидший, зручніший і краще для SEO.',
     href: '/blog/react-vite',
     tag: 'Гайд',
-    date: '16 липня 2026',
+    date: '28 квітня 2026',
     read: '4 хв',
   },
 ];
@@ -42,8 +42,8 @@ export default function BlogIndex() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Seo
-        title="Блог про веб-розробку та сайти | KRVTSV CORP"
-        description="Гайди та чеклісти з веб-розробки: лендінг чи сайт, чому немає заявок, стек React+Vite, запуск сайту для бізнесу. Від веб-студії KRVTSV CORP."
+        title="Блог веб-розробника | KRVTSV CORP"
+        description="Блог про створення сайтів: лендінг чи повноцінний сайт, чому немає заявок, React+Vite vs WordPress, запуск сайту з нуля. Пишу коротко і по ділу."
         path="/blog"
         ogType="website"
       />
@@ -52,10 +52,10 @@ export default function BlogIndex() {
         <section className="pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-4 sm:px-8">
           <p className="text-xs sm:text-[10px] font-black uppercase tracking-[0.3em] text-rose-500 mb-4">Блог</p>
           <h1 className="text-4xl md:text-6xl font-black leading-tight text-gray-900 mb-4 break-words">
-            Гайди та <span className="text-rose-500">чеклісти</span>
+            Блог веб-<span className="text-rose-500">розробника</span>
           </h1>
           <p className="text-gray-500 text-lg max-w-2xl mb-12">
-            Корисні матеріали про веб-розробку: як вибрати тип сайту, запустити проєкт з нуля та отримувати заявки.
+            Пишу про сайти, розробку і речі, які реально працюють. Без води, без нудьги.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
