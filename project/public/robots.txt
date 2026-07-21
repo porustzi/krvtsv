@@ -1,4 +1,33 @@
+# KRVTSV CORP — robots.txt
+# AI crawlers are welcome for search/reference but not for training.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# All other bots (Google, Bing, Yandex, etc.) — full access
 User-agent: *
 Allow: /
+Disallow: /admin/
+
+# For AI crawlers that respect Content-Signals
+Content-Signal: search=yes, ai-train=no, use=reference
 
 Sitemap: https://krvtsvcorp.pp.ua/sitemap.xml

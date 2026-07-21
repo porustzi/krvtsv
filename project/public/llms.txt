@@ -1,25 +1,25 @@
 # KRVTSV CORP — Веб-студія у Києві
-## Створюємо сайти, які продають: лендінги, бізнес-сайти, інтернет-магазини на React/Vite.
+> Українська веб-студія. Створюємо сайти на React/Vite + Node.js. Прямий контакт з розробником. Жодних шаблонів — тільки унікальні рішення під ваш бізнес. Запуск від 3 днів.
 
-> Українська веб-студія. Прямий контакт з розробником. Жодних шаблонів — тільки унікальні рішення під ваш бізнес. Запуск від 3 днів.
+## Ключові послуги
 
-## Основні сторінки
+- [Замовити лендінг](https://krvtsvcorp.pp.ua/services/landing) — Landing page на React/Vite для реклами та збору заявок. Від 4 000 грн, 3-5 днів.
+- [Фуллстак розробка](https://krvtsvcorp.pp.ua/services/fullstack) — Full-stack додатки: React + Node.js + TypeScript + PostgreSQL. API, адмінки, Telegram-боти. Від 20 000 грн.
+- [E-commerce](https://krvtsvcorp.pp.ua/services/ecommerce) — Інтернет-магазини з каталогом, кошиком, оплатою та адмінкою. Від 15 000 грн, від 14 днів.
+- [Веб-розробник Київ](https://krvtsvcorp.pp.ua/services/web-developer-kyiv) — Послуги веб-розробника: від лендінгу до складних проєктів. Київ та вся Україна.
+- [Головна](https://krvtsvcorp.pp.ua/) — Повний перелік послуг, портфоліо, ціни, FAQ.
 
-- [Головна](https://krvtsvcorp.pp.ua/) — Послуги веб-студії: лендінги, бізнес-сайти, e-commerce, редизайн. Портфоліо, ціни, FAQ.
-- [Лендінг під ключ](https://krvtsvcorp.pp.ua/services/landing) — Замовити landing page: односторінковий сайт для реклами та збору заявок на React/Vite. Від 4000 грн.
-- [Фуллстак розробка](https://krvtsvcorp.pp.ua/services/fullstack) — Розробка full-stack додатків на React + Node.js + TypeScript. API, адмінки, бази даних.
-- [E-commerce](https://krvtsvcorp.pp.ua/services/ecommerce) — Розробка інтернет-магазинів: каталог, кошик, оплата, адмінка.
-- [Веб-розробник Київ](https://krvtsvcorp.pp.ua/services/web-developer-kyiv) — Послуги веб-розробника в Києві та Україні.
+## Технології
+
+React, Vite, TypeScript, Tailwind CSS, Framer Motion, Node.js, PostgreSQL, Cloudflare Pages.
 
 ## Блог
 
-- [Лендінг чи сайт: що обрати для бізнесу](https://krvtsvcorp.pp.ua/blog/landing-vs-website) — Порівняння лендінгу та багатосторінкового сайту.
-- [Чому сайт не приносить заявки](https://krvtsvcorp.pp.ua/blog/no-leads-from-site) — Типові помилки та способи виправити.
-- [Як створити сайт з нуля](https://krvtsvcorp.pp.ua/blog/site-from-scratch-checklist) — Покрокова інструкція створення сайту.
-- [React + Vite: ідеальний стек](https://krvtsvcorp.pp.ua/blog/react-vite) — Чому React + Vite — оптимальний вибір для сучасного сайту.
+- [Лендінг чи сайт: що обрати?](https://krvtsvcorp.pp.ua/blog/landing-vs-website)
+- [Чому сайт не приносить заявки](https://krvtsvcorp.pp.ua/blog/no-leads-from-site)
+- [Як створити сайт з нуля](https://krvtsvcorp.pp.ua/blog/site-from-scratch-checklist)
+- [React + Vite vs WordPress](https://krvtsvcorp.pp.ua/blog/react-vite)
 
 ## Контакти
 
-- Email: krvtsvcorp@gmail.com
-- Telegram: https://t.me/holdingtokens
-- Телефон: +380935990741
+Email: krvtsvcorp@gmail.com | Telegram: https://t.me/holdingtokens | Телефон: +380935990741
